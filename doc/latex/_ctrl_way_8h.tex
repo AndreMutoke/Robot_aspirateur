@@ -1,0 +1,90 @@
+\hypertarget{_ctrl_way_8h}{}\doxysection{Référence du fichier Robot\+G7/include/\+Ctrl\+Way/\+Ctrl\+Way.h}
+\label{_ctrl_way_8h}\index{RobotG7/include/CtrlWay/CtrlWay.h@{RobotG7/include/CtrlWay/CtrlWay.h}}
+{\ttfamily \#include $<$Arduino.\+h$>$}\newline
+{\ttfamily \#include $<$ESP32\+Servo.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}../\+Guide\+Sound/\+Guide\+Sound.\+h\char`\"{}}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_ctrl_way}{Ctrl\+Way}}
+\begin{DoxyCompactList}\small\item\em La class \mbox{\hyperlink{class_ctrl_way}{Ctrl\+Way}} pour gerer la facon de réagir face à l\textquotesingle{}obstacle. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_ctrl_way_8h_a39d434e575abf15973ff580dda5abec7}{CTRL\+\_\+\+WAY}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Définitions de type}
+\begin{DoxyCompactItemize}
+\item 
+typedef enum \mbox{\hyperlink{_ctrl_way_8h_a1415309ebeac845b74bf341ef166fa39}{Way}} \mbox{\hyperlink{_ctrl_way_8h_a2aa4561bddf84ac497c4746e74dce480}{WAY}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Énumérations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{_ctrl_way_8h_a1415309ebeac845b74bf341ef166fa39}{Way}} \{ \mbox{\hyperlink{_ctrl_way_8h_a1415309ebeac845b74bf341ef166fa39a6a62f1e82647c91ddf701dea7b9aae3f}{DEVANT}}
+, \mbox{\hyperlink{_ctrl_way_8h_a1415309ebeac845b74bf341ef166fa39ae6085ecbd5458a79de62387688b12905}{DERRIERE}}
+, \mbox{\hyperlink{_ctrl_way_8h_a1415309ebeac845b74bf341ef166fa39a4ee960d97b04a1f22ed7ff81c7aa2e86}{GAUCHE}}
+, \mbox{\hyperlink{_ctrl_way_8h_a1415309ebeac845b74bf341ef166fa39a79f680205087956546ae263797bd1343}{DROITE}}
+ \}
+\begin{DoxyCompactList}\small\item\em La structure Way contient les différents chemins de navigation Nous avons DEVANT, DERRIERE, GAUCHE et DROITE. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentation des macros}
+\mbox{\Hypertarget{_ctrl_way_8h_a39d434e575abf15973ff580dda5abec7}\label{_ctrl_way_8h_a39d434e575abf15973ff580dda5abec7}} 
+\index{CtrlWay.h@{CtrlWay.h}!CTRL\_WAY@{CTRL\_WAY}}
+\index{CTRL\_WAY@{CTRL\_WAY}!CtrlWay.h@{CtrlWay.h}}
+\doxysubsubsection{\texorpdfstring{CTRL\_WAY}{CTRL\_WAY}}
+{\footnotesize\ttfamily \#define CTRL\+\_\+\+WAY}
+
+
+
+Définition à la ligne \mbox{\hyperlink{_ctrl_way_8h_source_l00013}{13}} du fichier \mbox{\hyperlink{_ctrl_way_8h_source}{Ctrl\+Way.\+h}}.
+
+
+
+\doxysubsection{Documentation des définitions de type}
+\mbox{\Hypertarget{_ctrl_way_8h_a2aa4561bddf84ac497c4746e74dce480}\label{_ctrl_way_8h_a2aa4561bddf84ac497c4746e74dce480}} 
+\index{CtrlWay.h@{CtrlWay.h}!WAY@{WAY}}
+\index{WAY@{WAY}!CtrlWay.h@{CtrlWay.h}}
+\doxysubsubsection{\texorpdfstring{WAY}{WAY}}
+{\footnotesize\ttfamily typedef enum \mbox{\hyperlink{_ctrl_way_8h_a1415309ebeac845b74bf341ef166fa39}{Way}} \mbox{\hyperlink{_ctrl_way_8h_a2aa4561bddf84ac497c4746e74dce480}{WAY}}}
+
+
+
+Définition à la ligne \mbox{\hyperlink{_ctrl_way_8h_source_l00029}{29}} du fichier \mbox{\hyperlink{_ctrl_way_8h_source}{Ctrl\+Way.\+h}}.
+
+
+
+\doxysubsection{Documentation du type de l\textquotesingle{}énumération}
+\mbox{\Hypertarget{_ctrl_way_8h_a1415309ebeac845b74bf341ef166fa39}\label{_ctrl_way_8h_a1415309ebeac845b74bf341ef166fa39}} 
+\index{CtrlWay.h@{CtrlWay.h}!Way@{Way}}
+\index{Way@{Way}!CtrlWay.h@{CtrlWay.h}}
+\doxysubsubsection{\texorpdfstring{Way}{Way}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_ctrl_way_8h_a1415309ebeac845b74bf341ef166fa39}{Way}}}
+
+
+
+La structure Way contient les différents chemins de navigation Nous avons DEVANT, DERRIERE, GAUCHE et DROITE. 
+
+\begin{DoxyEnumFields}{Valeurs énumérées}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEVANT@{DEVANT}!CtrlWay.h@{CtrlWay.h}}\index{CtrlWay.h@{CtrlWay.h}!DEVANT@{DEVANT}}}\mbox{\Hypertarget{_ctrl_way_8h_a1415309ebeac845b74bf341ef166fa39a6a62f1e82647c91ddf701dea7b9aae3f}\label{_ctrl_way_8h_a1415309ebeac845b74bf341ef166fa39a6a62f1e82647c91ddf701dea7b9aae3f}} 
+DEVANT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DERRIERE@{DERRIERE}!CtrlWay.h@{CtrlWay.h}}\index{CtrlWay.h@{CtrlWay.h}!DERRIERE@{DERRIERE}}}\mbox{\Hypertarget{_ctrl_way_8h_a1415309ebeac845b74bf341ef166fa39ae6085ecbd5458a79de62387688b12905}\label{_ctrl_way_8h_a1415309ebeac845b74bf341ef166fa39ae6085ecbd5458a79de62387688b12905}} 
+DERRIERE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{GAUCHE@{GAUCHE}!CtrlWay.h@{CtrlWay.h}}\index{CtrlWay.h@{CtrlWay.h}!GAUCHE@{GAUCHE}}}\mbox{\Hypertarget{_ctrl_way_8h_a1415309ebeac845b74bf341ef166fa39a4ee960d97b04a1f22ed7ff81c7aa2e86}\label{_ctrl_way_8h_a1415309ebeac845b74bf341ef166fa39a4ee960d97b04a1f22ed7ff81c7aa2e86}} 
+GAUCHE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DROITE@{DROITE}!CtrlWay.h@{CtrlWay.h}}\index{CtrlWay.h@{CtrlWay.h}!DROITE@{DROITE}}}\mbox{\Hypertarget{_ctrl_way_8h_a1415309ebeac845b74bf341ef166fa39a79f680205087956546ae263797bd1343}\label{_ctrl_way_8h_a1415309ebeac845b74bf341ef166fa39a79f680205087956546ae263797bd1343}} 
+DROITE&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Définition à la ligne \mbox{\hyperlink{_ctrl_way_8h_source_l00022}{22}} du fichier \mbox{\hyperlink{_ctrl_way_8h_source}{Ctrl\+Way.\+h}}.
+

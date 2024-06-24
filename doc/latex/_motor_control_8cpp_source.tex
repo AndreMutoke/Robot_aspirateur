@@ -1,0 +1,45 @@
+\hypertarget{_motor_control_8cpp_source}{}\doxysection{Motor\+Control.\+cpp}
+\label{_motor_control_8cpp_source}\index{RobotG7/include/MotorControl/MotorControl.cpp@{RobotG7/include/MotorControl/MotorControl.cpp}}
+\mbox{\hyperlink{_motor_control_8cpp}{Aller à la documentation de ce fichier.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_motor_control_8cpp_source_l00001}00001 \textcolor{comment}{/***********************************************************************************}}
+\DoxyCodeLine{\Hypertarget{_motor_control_8cpp_source_l00002}00002 \textcolor{comment}{ ***********************************************************************************}}
+\DoxyCodeLine{\Hypertarget{_motor_control_8cpp_source_l00003}00003 \textcolor{comment}{ ** @author : André MUTOKE MUSULE \& Japhet TSHIMANGA BWENDE                       **}}
+\DoxyCodeLine{\Hypertarget{_motor_control_8cpp_source_l00004}00004 \textcolor{comment}{ ** @date : Mardi 29 Mai 2024                                                     **}}
+\DoxyCodeLine{\Hypertarget{_motor_control_8cpp_source_l00005}00005 \textcolor{comment}{ ** @name : MotorControl.cpp                                                      **}}
+\DoxyCodeLine{\Hypertarget{_motor_control_8cpp_source_l00006}00006 \textcolor{comment}{ ** @details : Ce fichier implémente les engrenages moteurs pour les roues        **}}
+\DoxyCodeLine{\Hypertarget{_motor_control_8cpp_source_l00007}00007 \textcolor{comment}{ * *********************************************************************************}}
+\DoxyCodeLine{\Hypertarget{_motor_control_8cpp_source_l00008}00008 \textcolor{comment}{ * *********************************************************************************}}
+\DoxyCodeLine{\Hypertarget{_motor_control_8cpp_source_l00009}00009 \textcolor{comment}{*/}}
+\DoxyCodeLine{\Hypertarget{_motor_control_8cpp_source_l00010}00010 }
+\DoxyCodeLine{\Hypertarget{_motor_control_8cpp_source_l00011}00011 }
+\DoxyCodeLine{\Hypertarget{_motor_control_8cpp_source_l00012}00012 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_motor_control_8h}{MotorControl.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_motor_control_8cpp_source_l00013}00013 }
+\DoxyCodeLine{\Hypertarget{_motor_control_8cpp_source_l00014}\mbox{\hyperlink{class_motor_control_a14fa0d82390f4c6a1fc98f189150a858}{00014}} \mbox{\hyperlink{class_motor_control_a14fa0d82390f4c6a1fc98f189150a858}{MotorControl::MotorControl}}(\mbox{\hyperlink{struct_motor}{MOTOR}} *\mbox{\hyperlink{main_8cpp_af94f6571078c233db3d473d1ad4cd83e}{roue1}}, \mbox{\hyperlink{struct_motor}{MOTOR}} *\mbox{\hyperlink{main_8cpp_af94cbc7ef6ac7ee51cd4bacc1a40ccbc}{roue2}})}
+\DoxyCodeLine{\Hypertarget{_motor_control_8cpp_source_l00015}00015 \{}
+\DoxyCodeLine{\Hypertarget{_motor_control_8cpp_source_l00016}00016     this-\/>m\_roue1 = \mbox{\hyperlink{main_8cpp_af94f6571078c233db3d473d1ad4cd83e}{roue1}};}
+\DoxyCodeLine{\Hypertarget{_motor_control_8cpp_source_l00017}00017     this-\/>m\_roue2 = \mbox{\hyperlink{main_8cpp_af94cbc7ef6ac7ee51cd4bacc1a40ccbc}{roue2}};}
+\DoxyCodeLine{\Hypertarget{_motor_control_8cpp_source_l00018}00018 \}}
+\DoxyCodeLine{\Hypertarget{_motor_control_8cpp_source_l00019}00019 }
+\DoxyCodeLine{\Hypertarget{_motor_control_8cpp_source_l00020}00020 \textcolor{keywordtype}{void} MotorControl::configurationMotor()}
+\DoxyCodeLine{\Hypertarget{_motor_control_8cpp_source_l00021}00021 \{}
+\DoxyCodeLine{\Hypertarget{_motor_control_8cpp_source_l00022}00022     pinMode(this-\/>m\_roue1-\/>\mbox{\hyperlink{struct_motor_a8c3c3f96717f7b00337f45487b46fa70}{cPin1}}, OUTPUT);}
+\DoxyCodeLine{\Hypertarget{_motor_control_8cpp_source_l00023}00023     pinMode(this-\/>m\_roue1-\/>\mbox{\hyperlink{struct_motor_a64ff93f15e94fd5da23532223a849ec7}{cPin2}}, OUTPUT);}
+\DoxyCodeLine{\Hypertarget{_motor_control_8cpp_source_l00024}00024     pinMode(this-\/>m\_roue1-\/>\mbox{\hyperlink{struct_motor_a269aaf98eed4f32414c39b5a0a9f6484}{enablePin}}, OUTPUT);}
+\DoxyCodeLine{\Hypertarget{_motor_control_8cpp_source_l00025}00025 }
+\DoxyCodeLine{\Hypertarget{_motor_control_8cpp_source_l00026}00026     pinMode(this-\/>m\_roue2-\/>\mbox{\hyperlink{struct_motor_a8c3c3f96717f7b00337f45487b46fa70}{cPin1}}, OUTPUT);}
+\DoxyCodeLine{\Hypertarget{_motor_control_8cpp_source_l00027}00027     pinMode(this-\/>m\_roue2-\/>\mbox{\hyperlink{struct_motor_a64ff93f15e94fd5da23532223a849ec7}{cPin2}}, OUTPUT);}
+\DoxyCodeLine{\Hypertarget{_motor_control_8cpp_source_l00028}00028     pinMode(this-\/>m\_roue2-\/>\mbox{\hyperlink{struct_motor_a269aaf98eed4f32414c39b5a0a9f6484}{enablePin}}, OUTPUT);}
+\DoxyCodeLine{\Hypertarget{_motor_control_8cpp_source_l00029}00029 }
+\DoxyCodeLine{\Hypertarget{_motor_control_8cpp_source_l00030}00030     ledcSetup(\mbox{\hyperlink{_motor_control_8h_a4b3b0d03377f0a353e580a2f319c28f0}{PWMCHANNEL}}, \mbox{\hyperlink{_motor_control_8h_a0950537a96e2a97762fe66c30ac6bffa}{FREQENCE\_CONTROL}}, \mbox{\hyperlink{_motor_control_8h_a95d55ebfa2f2f1bd14867ad6a6cc9bfb}{RESOLUTION}});}
+\DoxyCodeLine{\Hypertarget{_motor_control_8cpp_source_l00031}00031 }
+\DoxyCodeLine{\Hypertarget{_motor_control_8cpp_source_l00032}00032     ledcAttachPin(this-\/>m\_roue1-\/>\mbox{\hyperlink{struct_motor_a269aaf98eed4f32414c39b5a0a9f6484}{enablePin}}, this-\/>m\_roue1-\/>pwmChannel);}
+\DoxyCodeLine{\Hypertarget{_motor_control_8cpp_source_l00033}00033     ledcAttachPin(this-\/>m\_roue2-\/>\mbox{\hyperlink{struct_motor_a269aaf98eed4f32414c39b5a0a9f6484}{enablePin}}, this-\/>m\_roue2-\/>pwmChannel);}
+\DoxyCodeLine{\Hypertarget{_motor_control_8cpp_source_l00034}00034 \}}
+\DoxyCodeLine{\Hypertarget{_motor_control_8cpp_source_l00035}00035 }
+\DoxyCodeLine{\Hypertarget{_motor_control_8cpp_source_l00036}\mbox{\hyperlink{class_motor_control_a2ceaea74982762f62b6b2ef912452b70}{00036}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_motor_control_a2ceaea74982762f62b6b2ef912452b70}{MotorControl::begin}}()}
+\DoxyCodeLine{\Hypertarget{_motor_control_8cpp_source_l00037}00037 \{}
+\DoxyCodeLine{\Hypertarget{_motor_control_8cpp_source_l00038}00038     configurationMotor();}
+\DoxyCodeLine{\Hypertarget{_motor_control_8cpp_source_l00039}00039 \}}
+
+\end{DoxyCode}

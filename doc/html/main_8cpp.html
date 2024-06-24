@@ -1,0 +1,290 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.4"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>RobotG7_project: Référence du fichier /home/andremutoke/Documents/PlatformIO/Projects/ESP32_Project_Robot_Manage/src/main.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="robotlogo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">RobotG7_project<span id="projectnumber">&#160;v1.0.0</span>
+   </div>
+   <div id="projectbrief">Robot à usage domestique, pouvant fonctionner en automatique ou manuel</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.9.4 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Recherche','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">Macros</a> &#124;
+<a href="#func-members">Fonctions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
+  <div class="headertitle"><div class="title">Référence du fichier main.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;Arduino.h&gt;</code><br />
+<code>#include &lt;DabbleESP32.h&gt;</code><br />
+<code>#include &lt;ESP32Servo.h&gt;</code><br />
+<code>#include &lt;<a class="el" href="_robot_g7_8h_source.html">RobotG7.h</a>&gt;</code><br />
+</div>
+<p><a href="main_8cpp_source.html">Aller au code source de ce fichier.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a5cf885ab33e020a11eb58d9e7142436b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a5cf885ab33e020a11eb58d9e7142436b">INTERVAL_TIME</a>&#160;&#160;&#160;1000</td></tr>
+<tr class="memdesc:a5cf885ab33e020a11eb58d9e7142436b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Le système est implémenté dans ce fichier.  <a href="main_8cpp.html#a5cf885ab33e020a11eb58d9e7142436b">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a5cf885ab33e020a11eb58d9e7142436b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:a4fc01d736fe50cf5b977f755b675f11d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a4fc01d736fe50cf5b977f755b675f11d">setup</a> ()</td></tr>
+<tr class="memdesc:a4fc01d736fe50cf5b977f755b675f11d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction de parametrage.  <a href="main_8cpp.html#a4fc01d736fe50cf5b977f755b675f11d">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a4fc01d736fe50cf5b977f755b675f11d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe461d27b9c48d5921c00d521181f12f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#afe461d27b9c48d5921c00d521181f12f">loop</a> ()</td></tr>
+<tr class="memdesc:afe461d27b9c48d5921c00d521181f12f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction du déroulement du système.  <a href="main_8cpp.html#afe461d27b9c48d5921c00d521181f12f">Plus de détails...</a><br /></td></tr>
+<tr class="separator:afe461d27b9c48d5921c00d521181f12f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:af94f6571078c233db3d473d1ad4cd83e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_motor_control_8h.html#a07fc823c2440aeb8bc84c6081e050453">MOTOR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#af94f6571078c233db3d473d1ad4cd83e">roue1</a> = {27, 26, 14, <a class="el" href="_motor_control_8h.html#a4b3b0d03377f0a353e580a2f319c28f0">PWMCHANNEL</a>}</td></tr>
+<tr class="memdesc:af94f6571078c233db3d473d1ad4cd83e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Definitions des roues.  <a href="main_8cpp.html#af94f6571078c233db3d473d1ad4cd83e">Plus de détails...</a><br /></td></tr>
+<tr class="separator:af94f6571078c233db3d473d1ad4cd83e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af94cbc7ef6ac7ee51cd4bacc1a40ccbc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_motor_control_8h.html#a07fc823c2440aeb8bc84c6081e050453">MOTOR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#af94cbc7ef6ac7ee51cd4bacc1a40ccbc">roue2</a> = {25, 33, 32, <a class="el" href="_motor_control_8h.html#aec23e48fe03e56b314a466f3125c6b69">PWMCHANNEL2</a>}</td></tr>
+<tr class="separator:af94cbc7ef6ac7ee51cd4bacc1a40ccbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1fd977fa0687f28a2a7a1a160ae63390"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_robot_g7.html">RobotG7</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a1fd977fa0687f28a2a7a1a160ae63390">myrobot</a> = new <a class="el" href="class_robot_g7.html">RobotG7</a>(&amp;<a class="el" href="main_8cpp.html#af94f6571078c233db3d473d1ad4cd83e">roue1</a>, &amp;<a class="el" href="main_8cpp.html#af94cbc7ef6ac7ee51cd4bacc1a40ccbc">roue2</a>)</td></tr>
+<tr class="memdesc:a1fd977fa0687f28a2a7a1a160ae63390"><td class="mdescLeft">&#160;</td><td class="mdescRight">Instantiation du robot.  <a href="main_8cpp.html#a1fd977fa0687f28a2a7a1a160ae63390">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a1fd977fa0687f28a2a7a1a160ae63390"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08bde7700e3ec732cafaccae5ec48dd2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a08bde7700e3ec732cafaccae5ec48dd2">PIN_MODE_CTRL</a> = 5</td></tr>
+<tr class="separator:a08bde7700e3ec732cafaccae5ec48dd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c57d3e34c8fe5bc12be40622b490b1d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a4c57d3e34c8fe5bc12be40622b490b1d">tempctrl</a></td></tr>
+<tr class="separator:a4c57d3e34c8fe5bc12be40622b490b1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88429b50f34953348f4a5c231a7c325f"><td class="memItemLeft" align="right" valign="top">unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a88429b50f34953348f4a5c231a7c325f">previouMillis</a></td></tr>
+<tr class="memdesc:a88429b50f34953348f4a5c231a7c325f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gestion du temps.  <a href="main_8cpp.html#a88429b50f34953348f4a5c231a7c325f">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a88429b50f34953348f4a5c231a7c325f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Documentation des macros</h2>
+<a id="a5cf885ab33e020a11eb58d9e7142436b" name="a5cf885ab33e020a11eb58d9e7142436b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5cf885ab33e020a11eb58d9e7142436b">&#9670;&nbsp;</a></span>INTERVAL_TIME</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define INTERVAL_TIME&#160;&#160;&#160;1000</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Le système est implémenté dans ce fichier. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="main_8cpp_source.html#l00023">23</a> du fichier <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentation des fonctions</h2>
+<a id="afe461d27b9c48d5921c00d521181f12f" name="afe461d27b9c48d5921c00d521181f12f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe461d27b9c48d5921c00d521181f12f">&#9670;&nbsp;</a></span>loop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void loop </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fonction du déroulement du système. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="main_8cpp_source.html#l00060">60</a> du fichier <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a4fc01d736fe50cf5b977f755b675f11d" name="a4fc01d736fe50cf5b977f755b675f11d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4fc01d736fe50cf5b977f755b675f11d">&#9670;&nbsp;</a></span>setup()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setup </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fonction de parametrage. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="main_8cpp_source.html#l00048">48</a> du fichier <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentation des variables</h2>
+<a id="a1fd977fa0687f28a2a7a1a160ae63390" name="a1fd977fa0687f28a2a7a1a160ae63390"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1fd977fa0687f28a2a7a1a160ae63390">&#9670;&nbsp;</a></span>myrobot</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_robot_g7.html">RobotG7</a>* myrobot = new <a class="el" href="class_robot_g7.html">RobotG7</a>(&amp;<a class="el" href="main_8cpp.html#af94f6571078c233db3d473d1ad4cd83e">roue1</a>, &amp;<a class="el" href="main_8cpp.html#af94cbc7ef6ac7ee51cd4bacc1a40ccbc">roue2</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Instantiation du robot. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="main_8cpp_source.html#l00039">39</a> du fichier <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a08bde7700e3ec732cafaccae5ec48dd2" name="a08bde7700e3ec732cafaccae5ec48dd2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a08bde7700e3ec732cafaccae5ec48dd2">&#9670;&nbsp;</a></span>PIN_MODE_CTRL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int PIN_MODE_CTRL = 5</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Définition à la ligne <a class="el" href="main_8cpp_source.html#l00041">41</a> du fichier <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a88429b50f34953348f4a5c231a7c325f" name="a88429b50f34953348f4a5c231a7c325f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88429b50f34953348f4a5c231a7c325f">&#9670;&nbsp;</a></span>previouMillis</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned long previouMillis</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gestion du temps. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="main_8cpp_source.html#l00045">45</a> du fichier <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="af94f6571078c233db3d473d1ad4cd83e" name="af94f6571078c233db3d473d1ad4cd83e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af94f6571078c233db3d473d1ad4cd83e">&#9670;&nbsp;</a></span>roue1</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_motor_control_8h.html#a07fc823c2440aeb8bc84c6081e050453">MOTOR</a> roue1 = {27, 26, 14, <a class="el" href="_motor_control_8h.html#a4b3b0d03377f0a353e580a2f319c28f0">PWMCHANNEL</a>}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definitions des roues. </p>
+<p >Put to PIN 2 the ECHO PIN of U-S Put to PIN 4 the TRIG PIN of U-S </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="main_8cpp_source.html#l00034">34</a> du fichier <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="af94cbc7ef6ac7ee51cd4bacc1a40ccbc" name="af94cbc7ef6ac7ee51cd4bacc1a40ccbc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af94cbc7ef6ac7ee51cd4bacc1a40ccbc">&#9670;&nbsp;</a></span>roue2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_motor_control_8h.html#a07fc823c2440aeb8bc84c6081e050453">MOTOR</a> roue2 = {25, 33, 32, <a class="el" href="_motor_control_8h.html#aec23e48fe03e56b314a466f3125c6b69">PWMCHANNEL2</a>}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Définition à la ligne <a class="el" href="main_8cpp_source.html#l00035">35</a> du fichier <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a4c57d3e34c8fe5bc12be40622b490b1d" name="a4c57d3e34c8fe5bc12be40622b490b1d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c57d3e34c8fe5bc12be40622b490b1d">&#9670;&nbsp;</a></span>tempctrl</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int tempctrl</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Définition à la ligne <a class="el" href="main_8cpp_source.html#l00042">42</a> du fichier <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
+</small></address>
+</body>
+</html>

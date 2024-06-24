@@ -1,0 +1,148 @@
+///////////////
+//ARDUINOTUTO//
+///////////////
+
+////Motor////
+// Motor A
+int motor1Pin1 = 27;
+int motor1Pin2 = 26;
+int enable1Pin = 14;
+
+
+//Motor B
+int motor2Pin3 = 25;
+int motor2Pin4 = 33;
+int enable2Pin = 32;
+
+// Setting PWM properties
+const int freq = 30000;
+const int pwmChannel = 0;
+const int pwmChannel2 = 1;
+const int resolution = 8;
+int dutyCycle = 0;
+
+int totalLeft = 0;
+int totalRight = 0;
+////End motor////
+
+///Dabble bluetooth////
+#define CUSTOM_SETTINGS
+#define INCLUDE_GAMEPAD_MODULEpowerChannel
+#include <DabbleESP32.h>
+///FIN Dabble bluetooth////
+
+void configurationMoteurs();
+void obtenirVitesseJoystick();
+void deplacerAvant();
+void deplacerArriere() ;
+
+void setup() {
+  configurationMoteurs();
+
+  Dabble.begin("MyEsp32");
+  Serial.begin(115200);
+}
+
+
+
+void loop() {
+  Dabble.processInput();
+  
+  obtenirVitesseJoystick();
+  
+  ledcWrite(pwmChannel, totalLeft);
+  ledcWrite(pwmChannel2, totalRight);
+}
+
+void configurationMoteurs() {
+  // sets the pins as outputs:
+  pinMode(motor1Pin1, OUTPUT);
+  pinMode(motor1Pin2, OUTPUT);
+  pinMode(enable1Pin, OUTPUT);
+
+  // sets the pins as outputs:
+  pinMode(motor2Pin3, OUTPUT);
+  pinMode(motor2Pin4, OUTPUT);
+  pinMode(enable2Pin, OUTPUT);
+
+  // configure LED PWM functionalitites
+  ledcSetup(pwmChannel, freq, resolution);
+
+  // attach the channel to the GPIO to be controlled
+  ledcAttachPin(enable1Pin, pwmChannel);
+  ledcAttachPin(enable2Pin, pwmChannel2);
+}
+
+void obtenirVitesseJoystick() {
+  float xval = GamePad.getXaxisData();
+  float yval = GamePad.getYaxisData();
+
+  //Pour la calibration
+  if (xval < -6) {
+    xval = -6;
+  } else if (xval > 6) {
+    xval = 6;
+  }
+  if (yval < -6) {
+    yval = -6;
+  } else if (yval > 6) {
+    yval = 6;
+  }
+
+  int yMapped = 0;
+  if (yval < 0 )
+  {
+    deplacerArriere();
+    yMapped = map(yval, -6, 0, 250, 0);
+  }
+  else
+  {
+    deplacerAvant();
+    yMapped = map(yval, 0, 6, 0, 250);
+  }
+
+  int xMapped;
+  if (xval < 0 ){
+    xMapped = map(xval, -6, 0, 250, 0);
+  }
+  else {
+    xMapped = map(xval, 0, 6, 0, 250);
+  }
+
+  if (xval < 0 ) {
+    totalLeft = yMapped + xMapped;
+    if (totalLeft > 250) {
+      totalLeft = 250;
+    }
+
+    totalRight = yMapped - xMapped;
+    if (totalRight < 0) {
+      totalRight = 0;
+    }
+
+  } else {
+    totalLeft = yMapped - xMapped;
+    if (totalLeft < 0) {
+      totalLeft = 0;
+    }pwmChannel
+
+    totalRight = yMapped + xMapped;
+    if (totalRight > 250) {
+      totalRight = 250;
+    }
+  }
+}
+
+void deplacerAvant() {
+  digitalWrite(motor1Pin1, LOW);
+  digitalWrite(motor1Pin2, HIGH);
+  digitalWrite(motor2Pin3, LOW);
+  digitalWrite(motor2Pin4, HIGH);
+}
+
+void deplacerArriere() {
+  digitalWrite(motor1Pin1, HIGH);
+  digitalWrite(motor1Pin2, LOW);
+  digitalWrite(motor2Pin3, HIGH);
+  digitalWrite(motor2Pin4, LOW);
+}

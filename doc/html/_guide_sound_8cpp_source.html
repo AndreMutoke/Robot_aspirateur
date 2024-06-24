@@ -1,0 +1,149 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.4"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>RobotG7_project:  Fichier source de RobotG7/include/GuideSound/GuideSound.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="robotlogo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">RobotG7_project<span id="projectnumber">&#160;v1.0.0</span>
+   </div>
+   <div id="projectbrief">Robot à usage domestique, pouvant fonctionner en automatique ou manuel</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.9.4 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Recherche','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_37f74ce27f50d4e4dc244652280e45e5.html">RobotG7</a></li><li class="navelem"><a class="el" href="dir_4f32ca3566b92a644e966e7cc2ab1769.html">include</a></li><li class="navelem"><a class="el" href="dir_e0fffb0bfb91c0ca3826503513e76374.html">GuideSound</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">GuideSound.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_guide_sound_8cpp.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/***********************************************************************************</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> ***********************************************************************************</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> ** @author : André MUTOKE MUSULE &amp; Japhet TSHIMANGA BWENDE                       **</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> ** @date : Mardi 29 Mai 2024                                                     **</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> ** @name : GuideSound.cpp                                                        **</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> ** @details : Ce fichier implémente le capteur ultra son                         **</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> * *********************************************************************************</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> * *********************************************************************************</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment">*/</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;<a class="code" href="_guide_sound_8h.html">GuideSound.h</a>&quot;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="_guide_sound_8cpp.html#a6c70375f9b7723d2baff508e6f6c2d7f">   14</a></span><span class="preprocessor">#define __PULSE_DOWN__ 2</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="_guide_sound_8cpp.html#a14f92617b583c521d9e3ab00d9bcaca5">   15</a></span><span class="preprocessor">#define __PULSE_UP__ 10</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="_guide_sound_8cpp.html#a388769a3226306c426f5da3d0d73a6a1">   17</a></span><span class="preprocessor">#define __PIN_OK__ 1</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="_guide_sound_8cpp.html#a9dbda6217123762e6fbf707d1ea25c2d">   18</a></span><span class="preprocessor">#define __PIN_NOT_OK__ 0</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="class_guide_sound.html#a9d5c05a474524fe4c811d50686e012b8">   20</a></span><a class="code hl_function" href="class_guide_sound.html#a9d5c05a474524fe4c811d50686e012b8">GuideSound::GuideSound</a>(uint8_t trig, uint8_t echo)</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>{</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    this-&gt;m_trig_pin = trig;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    this-&gt;m_echo_pin= echo;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>}</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="class_guide_sound.html#a9695a67bdf33b555fccf58f8261965b5">   27</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_guide_sound.html#a9695a67bdf33b555fccf58f8261965b5">GuideSound::begin</a>()</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>{</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    pinMode(this-&gt;m_trig_pin, OUTPUT);</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    pinMode(this-&gt;m_echo_pin, INPUT);</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    digitalWrite(this-&gt;m_trig_pin, LOW);</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>}</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="keywordtype">int</span> GuideSound::pulseEmit()</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>{</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keywordflow">if</span>(this-&gt;m_trig_pin != 0)</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    {</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        digitalWrite(this-&gt;m_trig_pin, LOW); delayMicroseconds(<a class="code hl_define" href="_guide_sound_8cpp.html#a6c70375f9b7723d2baff508e6f6c2d7f">__PULSE_DOWN__</a>);</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        digitalWrite(this-&gt;m_trig_pin, HIGH); delayMicroseconds(<a class="code hl_define" href="_guide_sound_8cpp.html#a14f92617b583c521d9e3ab00d9bcaca5">__PULSE_UP__</a>);</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        digitalWrite(this-&gt;m_trig_pin, LOW);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        <span class="keywordflow">return</span> <a class="code hl_define" href="_guide_sound_8cpp.html#a388769a3226306c426f5da3d0d73a6a1">__PIN_OK__</a>;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    }</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keywordflow">return</span> <a class="code hl_define" href="_guide_sound_8cpp.html#a9dbda6217123762e6fbf707d1ea25c2d">__PIN_NOT_OK__</a>;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>}</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="keywordtype">void</span> GuideSound::captureDistance_and_Delay()</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>{</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="keywordflow">if</span>(this-&gt;pulseEmit())</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    {</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        <span class="keywordflow">if</span>(this-&gt;m_echo_pin)</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        {</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>            this-&gt;m_duree = pulseIn(this-&gt;m_echo_pin, HIGH);</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>            this-&gt;m_distance = this-&gt;m_duree / 58.2;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        }</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    }</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>}</div>
+<div class="ttc" id="a_guide_sound_8cpp_html_a14f92617b583c521d9e3ab00d9bcaca5"><div class="ttname"><a href="_guide_sound_8cpp.html#a14f92617b583c521d9e3ab00d9bcaca5">__PULSE_UP__</a></div><div class="ttdeci">#define __PULSE_UP__</div><div class="ttdef"><b>Definition:</b> <a href="_guide_sound_8cpp_source.html#l00015">GuideSound.cpp:15</a></div></div>
+<div class="ttc" id="a_guide_sound_8cpp_html_a388769a3226306c426f5da3d0d73a6a1"><div class="ttname"><a href="_guide_sound_8cpp.html#a388769a3226306c426f5da3d0d73a6a1">__PIN_OK__</a></div><div class="ttdeci">#define __PIN_OK__</div><div class="ttdef"><b>Definition:</b> <a href="_guide_sound_8cpp_source.html#l00017">GuideSound.cpp:17</a></div></div>
+<div class="ttc" id="a_guide_sound_8cpp_html_a6c70375f9b7723d2baff508e6f6c2d7f"><div class="ttname"><a href="_guide_sound_8cpp.html#a6c70375f9b7723d2baff508e6f6c2d7f">__PULSE_DOWN__</a></div><div class="ttdeci">#define __PULSE_DOWN__</div><div class="ttdef"><b>Definition:</b> <a href="_guide_sound_8cpp_source.html#l00014">GuideSound.cpp:14</a></div></div>
+<div class="ttc" id="a_guide_sound_8cpp_html_a9dbda6217123762e6fbf707d1ea25c2d"><div class="ttname"><a href="_guide_sound_8cpp.html#a9dbda6217123762e6fbf707d1ea25c2d">__PIN_NOT_OK__</a></div><div class="ttdeci">#define __PIN_NOT_OK__</div><div class="ttdef"><b>Definition:</b> <a href="_guide_sound_8cpp_source.html#l00018">GuideSound.cpp:18</a></div></div>
+<div class="ttc" id="a_guide_sound_8h_html"><div class="ttname"><a href="_guide_sound_8h.html">GuideSound.h</a></div></div>
+<div class="ttc" id="aclass_guide_sound_html_a9695a67bdf33b555fccf58f8261965b5"><div class="ttname"><a href="class_guide_sound.html#a9695a67bdf33b555fccf58f8261965b5">GuideSound::begin</a></div><div class="ttdeci">void begin()</div><div class="ttdoc">begin initialise la capteur ultra son</div><div class="ttdef"><b>Definition:</b> <a href="_guide_sound_8cpp_source.html#l00027">GuideSound.cpp:27</a></div></div>
+<div class="ttc" id="aclass_guide_sound_html_a9d5c05a474524fe4c811d50686e012b8"><div class="ttname"><a href="class_guide_sound.html#a9d5c05a474524fe4c811d50686e012b8">GuideSound::GuideSound</a></div><div class="ttdeci">GuideSound(uint8_t trig=0, uint8_t echo=0)</div><div class="ttdoc">Guidesound est le constructeur.</div><div class="ttdef"><b>Definition:</b> <a href="_guide_sound_8cpp_source.html#l00020">GuideSound.cpp:20</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
+</small></address>
+</body>
+</html>

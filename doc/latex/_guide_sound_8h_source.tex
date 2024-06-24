@@ -1,0 +1,48 @@
+\hypertarget{_guide_sound_8h_source}{}\doxysection{Guide\+Sound.\+h}
+\label{_guide_sound_8h_source}\index{RobotG7/include/GuideSound/GuideSound.h@{RobotG7/include/GuideSound/GuideSound.h}}
+\mbox{\hyperlink{_guide_sound_8h}{Aller à la documentation de ce fichier.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_guide_sound_8h_source_l00001}00001 \textcolor{comment}{/***********************************************************************************}}
+\DoxyCodeLine{\Hypertarget{_guide_sound_8h_source_l00002}00002 \textcolor{comment}{ ***********************************************************************************}}
+\DoxyCodeLine{\Hypertarget{_guide_sound_8h_source_l00003}00003 \textcolor{comment}{ ** @author : André MUTOKE MUSULE \& Japhet TSHIMANGA BWENDE                       **}}
+\DoxyCodeLine{\Hypertarget{_guide_sound_8h_source_l00004}00004 \textcolor{comment}{ ** @date : Mardi 29 Mai 2024                                                     **}}
+\DoxyCodeLine{\Hypertarget{_guide_sound_8h_source_l00005}00005 \textcolor{comment}{ ** @name : GuideSound.h                                                          **}}
+\DoxyCodeLine{\Hypertarget{_guide_sound_8h_source_l00006}00006 \textcolor{comment}{ ** @details : Ce fichier implémente le capteur ultra son                         **}}
+\DoxyCodeLine{\Hypertarget{_guide_sound_8h_source_l00007}00007 \textcolor{comment}{ * *********************************************************************************}}
+\DoxyCodeLine{\Hypertarget{_guide_sound_8h_source_l00008}00008 \textcolor{comment}{ * *********************************************************************************}}
+\DoxyCodeLine{\Hypertarget{_guide_sound_8h_source_l00009}00009 \textcolor{comment}{*/}}
+\DoxyCodeLine{\Hypertarget{_guide_sound_8h_source_l00010}00010 }
+\DoxyCodeLine{\Hypertarget{_guide_sound_8h_source_l00011}00011 }
+\DoxyCodeLine{\Hypertarget{_guide_sound_8h_source_l00012}00012 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{\Hypertarget{_guide_sound_8h_source_l00013}00013 \textcolor{preprocessor}{\#ifndef GUIDE\_SOUND\_H}}
+\DoxyCodeLine{\Hypertarget{_guide_sound_8h_source_l00014}\mbox{\hyperlink{_guide_sound_8h_a29dfeac3ac3a00b8dab4925e11b378b5}{00014}} \textcolor{preprocessor}{\#define GUIDE\_SOUND\_H}}
+\DoxyCodeLine{\Hypertarget{_guide_sound_8h_source_l00015}00015 }
+\DoxyCodeLine{\Hypertarget{_guide_sound_8h_source_l00016}00016 \textcolor{preprocessor}{\#include <Arduino.h>}}
+\DoxyCodeLine{\Hypertarget{_guide_sound_8h_source_l00017}00017 \textcolor{preprocessor}{\#include <Wire.h>}}
+\DoxyCodeLine{\Hypertarget{_guide_sound_8h_source_l00018}00018 }
+\DoxyCodeLine{\Hypertarget{_guide_sound_8h_source_l00020}\mbox{\hyperlink{class_guide_sound}{00020}} \textcolor{keyword}{class }\mbox{\hyperlink{class_guide_sound}{GuideSound}}}
+\DoxyCodeLine{\Hypertarget{_guide_sound_8h_source_l00021}00021 \{}
+\DoxyCodeLine{\Hypertarget{_guide_sound_8h_source_l00022}00022 public :}
+\DoxyCodeLine{\Hypertarget{_guide_sound_8h_source_l00023}00023 }
+\DoxyCodeLine{\Hypertarget{_guide_sound_8h_source_l00027}00027     \mbox{\hyperlink{class_guide_sound_a9d5c05a474524fe4c811d50686e012b8}{GuideSound}}(uint8\_t trig = 0, uint8\_t echo = 0);}
+\DoxyCodeLine{\Hypertarget{_guide_sound_8h_source_l00029}00029     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_guide_sound_a9695a67bdf33b555fccf58f8261965b5}{begin}}(); \textcolor{comment}{// Initialiser le programme;}}
+\DoxyCodeLine{\Hypertarget{_guide_sound_8h_source_l00030}00030     }
+\DoxyCodeLine{\Hypertarget{_guide_sound_8h_source_l00033}\mbox{\hyperlink{class_guide_sound_a6752d98e4dbffe2ddb3bad9e7f1d63b8}{00033}}     uint32\_t \mbox{\hyperlink{class_guide_sound_a6752d98e4dbffe2ddb3bad9e7f1d63b8}{getDistance}}()\{ captureDistance\_and\_Delay(); \textcolor{keywordflow}{return} this-\/>m\_distance;\} }
+\DoxyCodeLine{\Hypertarget{_guide_sound_8h_source_l00034}00034 }
+\DoxyCodeLine{\Hypertarget{_guide_sound_8h_source_l00037}\mbox{\hyperlink{class_guide_sound_af313fab54d9ef8b2be114f59d39f77be}{00037}}     uint32\_t \mbox{\hyperlink{class_guide_sound_af313fab54d9ef8b2be114f59d39f77be}{getDelayEcho}}()\{ captureDistance\_and\_Delay(); \textcolor{keywordflow}{return} this-\/>m\_duree;\} \textcolor{comment}{// POur nous retourner le temps de voyage capturé}}
+\DoxyCodeLine{\Hypertarget{_guide_sound_8h_source_l00038}00038 \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{_guide_sound_8h_source_l00039}00039     uint8\_t m\_echo\_pin; \textcolor{comment}{// Le pin pour recevoir les echos retours}}
+\DoxyCodeLine{\Hypertarget{_guide_sound_8h_source_l00040}00040     uint8\_t m\_trig\_pin; \textcolor{comment}{// Le pin pour Emettre le son }}
+\DoxyCodeLine{\Hypertarget{_guide_sound_8h_source_l00041}00041 }
+\DoxyCodeLine{\Hypertarget{_guide_sound_8h_source_l00042}00042     uint32\_t m\_distance; \textcolor{comment}{// Pour calculer et concerver la distance}}
+\DoxyCodeLine{\Hypertarget{_guide_sound_8h_source_l00043}00043     uint32\_t m\_duree; }
+\DoxyCodeLine{\Hypertarget{_guide_sound_8h_source_l00044}00044 }
+\DoxyCodeLine{\Hypertarget{_guide_sound_8h_source_l00045}00045 }
+\DoxyCodeLine{\Hypertarget{_guide_sound_8h_source_l00047}00047     \textcolor{keywordtype}{void} captureDistance\_and\_Delay();}
+\DoxyCodeLine{\Hypertarget{_guide_sound_8h_source_l00050}00050     \textcolor{keywordtype}{int} pulseEmit();}
+\DoxyCodeLine{\Hypertarget{_guide_sound_8h_source_l00051}00051 }
+\DoxyCodeLine{\Hypertarget{_guide_sound_8h_source_l00052}00052 \};}
+\DoxyCodeLine{\Hypertarget{_guide_sound_8h_source_l00053}00053 }
+\DoxyCodeLine{\Hypertarget{_guide_sound_8h_source_l00054}00054 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// GUIDE\_SOUND\_H}}
+
+\end{DoxyCode}

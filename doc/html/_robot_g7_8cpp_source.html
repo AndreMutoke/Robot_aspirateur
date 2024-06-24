@@ -1,0 +1,498 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.4"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>RobotG7_project:  Fichier source de RobotG7/RobotG7.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="robotlogo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">RobotG7_project<span id="projectnumber">&#160;v1.0.0</span>
+   </div>
+   <div id="projectbrief">Robot à usage domestique, pouvant fonctionner en automatique ou manuel</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.9.4 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Recherche','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_37f74ce27f50d4e4dc244652280e45e5.html">RobotG7</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">RobotG7.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_robot_g7_8cpp.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/***********************************************************************************</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> ***********************************************************************************</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> ** @author : André MUTOKE MUSULE &amp; Japhet TSHIMANGA BWENDE                       **</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> ** @date : Mardi 29 Mai 2024                                                     **</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> ** @name : RobotG7.cpp                                                           **</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> ** @details : Ce fichier implémente les élément composant le robot du système    **</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> * *********************************************************************************</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> * *********************************************************************************</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment">*/</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;<a class="code" href="_robot_g7_8h.html">RobotG7.h</a>&quot;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="_robot_g7_8cpp.html#a2ea78da1d67ad267173b4daddcb55124">   15</a></span><span class="preprocessor">#define DEFAULT_TRIG_PIN 4</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="_robot_g7_8cpp.html#a8025633ed22faa3ca633f24f78703514">   16</a></span><span class="preprocessor">#define DEFAULT_ECHO_PIN 2</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="_robot_g7_8cpp.html#a670efbf10c7e1e503a30b001335479d9">   17</a></span><span class="preprocessor">#define PIN_CLEANNIG 18</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="_robot_g7_8cpp.html#a989760ad6cb65d1ad13e05681ba3be69">   19</a></span><span class="preprocessor">#define LIMIT_GET_OBSTACLE 10 </span><span class="comment">// 10 cm</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keyword">extern</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <a class="code hl_variable" href="_robot_g7_8cpp.html#a88429b50f34953348f4a5c231a7c325f">previouMillis</a>;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keyword">extern</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="_robot_g7_8cpp.html#a4c57d3e34c8fe5bc12be40622b490b1d">tempctrl</a>;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="class_robot_g7.html#a161f3b2ecb2ec812a9686c33f0bc40ce">   24</a></span><a class="code hl_function" href="class_robot_g7.html#a161f3b2ecb2ec812a9686c33f0bc40ce">RobotG7::RobotG7</a>(<a class="code hl_struct" href="struct_motor.html">MOTOR</a> *<a class="code hl_variable" href="main_8cpp.html#af94f6571078c233db3d473d1ad4cd83e">roue1</a>, <a class="code hl_struct" href="struct_motor.html">MOTOR</a> *<a class="code hl_variable" href="main_8cpp.html#af94cbc7ef6ac7ee51cd4bacc1a40ccbc">roue2</a>, <span class="keywordtype">int</span> pinCtrlMode)</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>{</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    this-&gt;m_gdSound = <span class="keyword">new</span> <a class="code hl_class" href="class_guide_sound.html">GuideSound</a>(<a class="code hl_define" href="_robot_g7_8cpp.html#a2ea78da1d67ad267173b4daddcb55124">DEFAULT_TRIG_PIN</a>, <a class="code hl_define" href="_robot_g7_8cpp.html#a8025633ed22faa3ca633f24f78703514">DEFAULT_ECHO_PIN</a>); <span class="comment">// (triger, echo)</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    this-&gt;m_rouesRobots = <span class="keyword">new</span> <a class="code hl_class" href="class_motor_control.html">MotorControl</a>(<a class="code hl_variable" href="main_8cpp.html#af94f6571078c233db3d473d1ad4cd83e">roue1</a>, <a class="code hl_variable" href="main_8cpp.html#af94cbc7ef6ac7ee51cd4bacc1a40ccbc">roue2</a>); </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    this-&gt;m_vitesseDroite = 190;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    this-&gt;m_vitesseGauche = 190;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    this-&gt;cheminAprendre = <span class="keyword">new</span> <a class="code hl_class" href="class_ctrl_way.html">CtrlWay</a>(); <span class="comment">// Par defaut à la pin 15</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    this-&gt;systemNav = <a class="code hl_enumvalue" href="_ctrl_way_8h.html#a1415309ebeac845b74bf341ef166fa39a6a62f1e82647c91ddf701dea7b9aae3f">DEVANT</a>;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    this-&gt;m_modeNav = <a class="code hl_enumvalue" href="_robot_g7_8h.html#af7e27612dcf48f1519de25b6c4293313a2ab2ea921d7cab148e47b16bdfda7d98">MODE_START</a>;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    this-&gt;modeManualnotPrepared = <a class="code hl_define" href="_robot_g7_8h.html#a5be3474296638f6b336a0126b2f070ec">ROBOTG7_TRUE</a>;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    this-&gt;enableCleanning = <a class="code hl_define" href="_robot_g7_8h.html#a642139526d49f9e73b72bf7f2dbd78bb">ROBOTG7_FALSE</a>;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="comment">// this-&gt;m_modeNav = MODE_AUTOMATIQUE;</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="comment">// this-&gt;ctrlMode = pinCtrlMode;</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>}</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="class_robot_g7.html#ad672da1e73e00594c75b0e10cf7f6d8a">   45</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_robot_g7.html#ad672da1e73e00594c75b0e10cf7f6d8a">RobotG7::begin</a>()</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>{</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="comment">// pinMode(this-&gt;ctrlMode, INPUT_PULLUP);</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    pinMode(<a class="code hl_define" href="_robot_g7_8cpp.html#a670efbf10c7e1e503a30b001335479d9">PIN_CLEANNIG</a>, OUTPUT);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    this-&gt;m_gdSound-&gt;<a class="code hl_function" href="class_guide_sound.html#a9695a67bdf33b555fccf58f8261965b5">begin</a>();</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    this-&gt;m_rouesRobots-&gt;<a class="code hl_function" href="class_motor_control.html#a2ceaea74982762f62b6b2ef912452b70">begin</a>();</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    this-&gt;cheminAprendre-&gt;<a class="code hl_function" href="class_ctrl_way.html#a34da85ad92b6ad3126a3b3435981096e">begin</a>();</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    digitalWrite(<a class="code hl_define" href="_robot_g7_8cpp.html#a670efbf10c7e1e503a30b001335479d9">PIN_CLEANNIG</a>, HIGH);</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>}</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="class_robot_g7.html#a3d453cf444709fc4fd6d0b0114618c35">   56</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_robot_g7.html#a3d453cf444709fc4fd6d0b0114618c35">RobotG7::writeSpeedOnChannel</a>(<span class="keywordtype">int</span> vitesseChannel1, <span class="keywordtype">int</span> vitesseChannel2)</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>{</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    this-&gt;m_vitesseDroite = vitesseChannel2;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    this-&gt;m_vitesseGauche = vitesseChannel1;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    ledcWrite(this-&gt;m_rouesRobots-&gt;<a class="code hl_function" href="class_motor_control.html#a76722bc93947ca2393f6aaa5d29fb48d">getRoue1</a>()-&gt;<a class="code hl_variable" href="struct_motor.html#ad50d41ae7167a1dade93686cb8a7a671">pwmChannel</a>, this-&gt;m_vitesseGauche);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    ledcWrite(this-&gt;m_rouesRobots-&gt;<a class="code hl_function" href="class_motor_control.html#ae2d7876ff28903ef41eb9412da469351">getRoue2</a>()-&gt;<a class="code hl_variable" href="struct_motor.html#ad50d41ae7167a1dade93686cb8a7a671">pwmChannel</a>, this-&gt;m_vitesseDroite);</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>}</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="class_robot_g7.html#af9e8cc61f988d84dae1df030602370a3">   65</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_robot_g7.html#af9e8cc61f988d84dae1df030602370a3">RobotG7::deplacementAvant</a>()</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>{</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    digitalWrite(this-&gt;m_rouesRobots-&gt;<a class="code hl_function" href="class_motor_control.html#a76722bc93947ca2393f6aaa5d29fb48d">getRoue1</a>()-&gt;<a class="code hl_variable" href="struct_motor.html#a269aaf98eed4f32414c39b5a0a9f6484">enablePin</a>, HIGH);</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    digitalWrite(this-&gt;m_rouesRobots-&gt;<a class="code hl_function" href="class_motor_control.html#ae2d7876ff28903ef41eb9412da469351">getRoue2</a>()-&gt;<a class="code hl_variable" href="struct_motor.html#a269aaf98eed4f32414c39b5a0a9f6484">enablePin</a>, HIGH);</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    digitalWrite(this-&gt;m_rouesRobots-&gt;<a class="code hl_function" href="class_motor_control.html#a76722bc93947ca2393f6aaa5d29fb48d">getRoue1</a>()-&gt;<a class="code hl_variable" href="struct_motor.html#a8c3c3f96717f7b00337f45487b46fa70">cPin1</a>, LOW);</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    digitalWrite(this-&gt;m_rouesRobots-&gt;<a class="code hl_function" href="class_motor_control.html#a76722bc93947ca2393f6aaa5d29fb48d">getRoue1</a>()-&gt;<a class="code hl_variable" href="struct_motor.html#a64ff93f15e94fd5da23532223a849ec7">cPin2</a>, HIGH);</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    digitalWrite(this-&gt;m_rouesRobots-&gt;<a class="code hl_function" href="class_motor_control.html#ae2d7876ff28903ef41eb9412da469351">getRoue2</a>()-&gt;<a class="code hl_variable" href="struct_motor.html#a8c3c3f96717f7b00337f45487b46fa70">cPin1</a>, HIGH);</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    digitalWrite(this-&gt;m_rouesRobots-&gt;<a class="code hl_function" href="class_motor_control.html#ae2d7876ff28903ef41eb9412da469351">getRoue2</a>()-&gt;<a class="code hl_variable" href="struct_motor.html#a64ff93f15e94fd5da23532223a849ec7">cPin2</a>, LOW);</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    this-&gt;<a class="code hl_function" href="class_robot_g7.html#a3d453cf444709fc4fd6d0b0114618c35">writeSpeedOnChannel</a>(200, 200);</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>}</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno"><a class="line" href="class_robot_g7.html#ab2e1c273a839b92bc32c7dc0e56525ff">   79</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_robot_g7.html#ab2e1c273a839b92bc32c7dc0e56525ff">RobotG7::deplacementArriere</a>()</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>{</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    digitalWrite(this-&gt;m_rouesRobots-&gt;<a class="code hl_function" href="class_motor_control.html#a76722bc93947ca2393f6aaa5d29fb48d">getRoue1</a>()-&gt;<a class="code hl_variable" href="struct_motor.html#a269aaf98eed4f32414c39b5a0a9f6484">enablePin</a>, HIGH);</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    digitalWrite(this-&gt;m_rouesRobots-&gt;<a class="code hl_function" href="class_motor_control.html#ae2d7876ff28903ef41eb9412da469351">getRoue2</a>()-&gt;<a class="code hl_variable" href="struct_motor.html#a269aaf98eed4f32414c39b5a0a9f6484">enablePin</a>, HIGH);</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    digitalWrite(this-&gt;m_rouesRobots-&gt;<a class="code hl_function" href="class_motor_control.html#a76722bc93947ca2393f6aaa5d29fb48d">getRoue1</a>()-&gt;<a class="code hl_variable" href="struct_motor.html#a8c3c3f96717f7b00337f45487b46fa70">cPin1</a>, HIGH);</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    digitalWrite(this-&gt;m_rouesRobots-&gt;<a class="code hl_function" href="class_motor_control.html#a76722bc93947ca2393f6aaa5d29fb48d">getRoue1</a>()-&gt;<a class="code hl_variable" href="struct_motor.html#a64ff93f15e94fd5da23532223a849ec7">cPin2</a>, LOW);</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    digitalWrite(this-&gt;m_rouesRobots-&gt;<a class="code hl_function" href="class_motor_control.html#ae2d7876ff28903ef41eb9412da469351">getRoue2</a>()-&gt;<a class="code hl_variable" href="struct_motor.html#a8c3c3f96717f7b00337f45487b46fa70">cPin1</a>, LOW);</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    digitalWrite(this-&gt;m_rouesRobots-&gt;<a class="code hl_function" href="class_motor_control.html#ae2d7876ff28903ef41eb9412da469351">getRoue2</a>()-&gt;<a class="code hl_variable" href="struct_motor.html#a64ff93f15e94fd5da23532223a849ec7">cPin2</a>, HIGH);</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    this-&gt;<a class="code hl_function" href="class_robot_g7.html#a3d453cf444709fc4fd6d0b0114618c35">writeSpeedOnChannel</a>(190, 190);</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>}</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno"><a class="line" href="class_robot_g7.html#affd5cdb6e2a247055ac7fd9cfbc3ab61">   93</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_robot_g7.html#affd5cdb6e2a247055ac7fd9cfbc3ab61">RobotG7::tourner_a_GaucheAvant</a>()</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>{</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    digitalWrite(this-&gt;m_rouesRobots-&gt;<a class="code hl_function" href="class_motor_control.html#a76722bc93947ca2393f6aaa5d29fb48d">getRoue1</a>()-&gt;<a class="code hl_variable" href="struct_motor.html#a269aaf98eed4f32414c39b5a0a9f6484">enablePin</a>, HIGH);</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    digitalWrite(this-&gt;m_rouesRobots-&gt;<a class="code hl_function" href="class_motor_control.html#ae2d7876ff28903ef41eb9412da469351">getRoue2</a>()-&gt;<a class="code hl_variable" href="struct_motor.html#a269aaf98eed4f32414c39b5a0a9f6484">enablePin</a>, LOW);</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    digitalWrite(this-&gt;m_rouesRobots-&gt;<a class="code hl_function" href="class_motor_control.html#a76722bc93947ca2393f6aaa5d29fb48d">getRoue1</a>()-&gt;<a class="code hl_variable" href="struct_motor.html#a8c3c3f96717f7b00337f45487b46fa70">cPin1</a>, LOW);</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    digitalWrite(this-&gt;m_rouesRobots-&gt;<a class="code hl_function" href="class_motor_control.html#a76722bc93947ca2393f6aaa5d29fb48d">getRoue1</a>()-&gt;<a class="code hl_variable" href="struct_motor.html#a64ff93f15e94fd5da23532223a849ec7">cPin2</a>, HIGH);</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    <span class="comment">// digitalWrite(this-&gt;m_rouesRobots-&gt;getRoue2()-&gt;cPin1, LOW);</span></div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    <span class="comment">// digitalWrite(this-&gt;m_rouesRobots-&gt;getRoue2()-&gt;cPin1, HIGH);</span></div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    this-&gt;<a class="code hl_function" href="class_robot_g7.html#a3d453cf444709fc4fd6d0b0114618c35">writeSpeedOnChannel</a>(190, 0);</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>}</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno"><a class="line" href="class_robot_g7.html#a4117417ad319bcec6854fb06add6ab93">  105</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_robot_g7.html#a4117417ad319bcec6854fb06add6ab93">RobotG7::tourner_a_DroiteAvant</a>()</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>{</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    digitalWrite(this-&gt;m_rouesRobots-&gt;<a class="code hl_function" href="class_motor_control.html#a76722bc93947ca2393f6aaa5d29fb48d">getRoue1</a>()-&gt;<a class="code hl_variable" href="struct_motor.html#a269aaf98eed4f32414c39b5a0a9f6484">enablePin</a>, LOW);</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    digitalWrite(this-&gt;m_rouesRobots-&gt;<a class="code hl_function" href="class_motor_control.html#ae2d7876ff28903ef41eb9412da469351">getRoue2</a>()-&gt;<a class="code hl_variable" href="struct_motor.html#a269aaf98eed4f32414c39b5a0a9f6484">enablePin</a>, HIGH);</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span> </div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    <span class="comment">// digitalWrite(this-&gt;m_rouesRobots-&gt;getRoue1()-&gt;cPin1, LOW);</span></div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    <span class="comment">// digitalWrite(this-&gt;m_rouesRobots-&gt;getRoue1()-&gt;cPin2, HIGH);</span></div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    digitalWrite(this-&gt;m_rouesRobots-&gt;<a class="code hl_function" href="class_motor_control.html#ae2d7876ff28903ef41eb9412da469351">getRoue2</a>()-&gt;<a class="code hl_variable" href="struct_motor.html#a8c3c3f96717f7b00337f45487b46fa70">cPin1</a>, HIGH);</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    digitalWrite(this-&gt;m_rouesRobots-&gt;<a class="code hl_function" href="class_motor_control.html#ae2d7876ff28903ef41eb9412da469351">getRoue2</a>()-&gt;<a class="code hl_variable" href="struct_motor.html#a64ff93f15e94fd5da23532223a849ec7">cPin2</a>, LOW);</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    this-&gt;<a class="code hl_function" href="class_robot_g7.html#a3d453cf444709fc4fd6d0b0114618c35">writeSpeedOnChannel</a>(0, 190);</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>}</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span> </div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span> </div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno"><a class="line" href="class_robot_g7.html#acd9a6e1f58a8cd414f3b65ec7d5276d9">  119</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_robot_g7.html#acd9a6e1f58a8cd414f3b65ec7d5276d9">RobotG7::tourner_a_GaucheArriere</a>()</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>{</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    digitalWrite(this-&gt;m_rouesRobots-&gt;<a class="code hl_function" href="class_motor_control.html#a76722bc93947ca2393f6aaa5d29fb48d">getRoue1</a>()-&gt;<a class="code hl_variable" href="struct_motor.html#a269aaf98eed4f32414c39b5a0a9f6484">enablePin</a>, LOW);</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    digitalWrite(this-&gt;m_rouesRobots-&gt;<a class="code hl_function" href="class_motor_control.html#ae2d7876ff28903ef41eb9412da469351">getRoue2</a>()-&gt;<a class="code hl_variable" href="struct_motor.html#a269aaf98eed4f32414c39b5a0a9f6484">enablePin</a>, HIGH);</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span> </div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    <span class="comment">// digitalWrite(this-&gt;m_rouesRobots-&gt;getRoue1()-&gt;cPin1, LOW);</span></div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    <span class="comment">// digitalWrite(this-&gt;m_rouesRobots-&gt;getRoue1()-&gt;cPin2, HIGH);</span></div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    digitalWrite(this-&gt;m_rouesRobots-&gt;<a class="code hl_function" href="class_motor_control.html#ae2d7876ff28903ef41eb9412da469351">getRoue2</a>()-&gt;<a class="code hl_variable" href="struct_motor.html#a8c3c3f96717f7b00337f45487b46fa70">cPin1</a>, LOW);</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    digitalWrite(this-&gt;m_rouesRobots-&gt;<a class="code hl_function" href="class_motor_control.html#ae2d7876ff28903ef41eb9412da469351">getRoue2</a>()-&gt;<a class="code hl_variable" href="struct_motor.html#a64ff93f15e94fd5da23532223a849ec7">cPin2</a>, HIGH);</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span> </div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>    this-&gt;<a class="code hl_function" href="class_robot_g7.html#a3d453cf444709fc4fd6d0b0114618c35">writeSpeedOnChannel</a>(190, 0);</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>}</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno"><a class="line" href="class_robot_g7.html#a60f1fd4ed04e5e8557948f49132228c4">  131</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_robot_g7.html#a60f1fd4ed04e5e8557948f49132228c4">RobotG7::tourner_a_DroiteArriere</a>()</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>{</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>    digitalWrite(this-&gt;m_rouesRobots-&gt;<a class="code hl_function" href="class_motor_control.html#a76722bc93947ca2393f6aaa5d29fb48d">getRoue1</a>()-&gt;<a class="code hl_variable" href="struct_motor.html#a269aaf98eed4f32414c39b5a0a9f6484">enablePin</a>, HIGH);</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>    digitalWrite(this-&gt;m_rouesRobots-&gt;<a class="code hl_function" href="class_motor_control.html#ae2d7876ff28903ef41eb9412da469351">getRoue2</a>()-&gt;<a class="code hl_variable" href="struct_motor.html#a269aaf98eed4f32414c39b5a0a9f6484">enablePin</a>, LOW);</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span> </div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    digitalWrite(this-&gt;m_rouesRobots-&gt;<a class="code hl_function" href="class_motor_control.html#a76722bc93947ca2393f6aaa5d29fb48d">getRoue1</a>()-&gt;<a class="code hl_variable" href="struct_motor.html#a8c3c3f96717f7b00337f45487b46fa70">cPin1</a>, HIGH);</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>    digitalWrite(this-&gt;m_rouesRobots-&gt;<a class="code hl_function" href="class_motor_control.html#a76722bc93947ca2393f6aaa5d29fb48d">getRoue1</a>()-&gt;<a class="code hl_variable" href="struct_motor.html#a64ff93f15e94fd5da23532223a849ec7">cPin2</a>, LOW);</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>    <span class="comment">// digitalWrite(this-&gt;m_rouesRobots-&gt;getRoue2()-&gt;cPin1, LOW);</span></div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>    <span class="comment">// digitalWrite(this-&gt;m_rouesRobots-&gt;getRoue2()-&gt;cPin1, HIGH);</span></div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span> </div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>    this-&gt;<a class="code hl_function" href="class_robot_g7.html#a3d453cf444709fc4fd6d0b0114618c35">writeSpeedOnChannel</a>(0, 190);</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>}</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span> </div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno"><a class="line" href="class_robot_g7.html#a546dc6faae444b85f408e925205c0f3a">  144</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_robot_g7.html#a546dc6faae444b85f408e925205c0f3a">RobotG7::stopRobotG7</a>()</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>{</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>    digitalWrite(this-&gt;m_rouesRobots-&gt;<a class="code hl_function" href="class_motor_control.html#a76722bc93947ca2393f6aaa5d29fb48d">getRoue1</a>()-&gt;<a class="code hl_variable" href="struct_motor.html#a269aaf98eed4f32414c39b5a0a9f6484">enablePin</a>, LOW);</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>    digitalWrite(this-&gt;m_rouesRobots-&gt;<a class="code hl_function" href="class_motor_control.html#ae2d7876ff28903ef41eb9412da469351">getRoue2</a>()-&gt;<a class="code hl_variable" href="struct_motor.html#a269aaf98eed4f32414c39b5a0a9f6484">enablePin</a>, LOW);</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span> </div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>    this-&gt;<a class="code hl_function" href="class_robot_g7.html#a3d453cf444709fc4fd6d0b0114618c35">writeSpeedOnChannel</a>(0, 0);</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span> </div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>}</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span> </div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span><span class="keywordtype">void</span> RobotG7::gamePadAutoGoStart()</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>{</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>     <span class="keywordflow">if</span>(GamePad.isStartPressed())</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>    {</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>        <a class="code hl_variable" href="_robot_g7_8cpp.html#a4c57d3e34c8fe5bc12be40622b490b1d">tempctrl</a> = 1;</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>    }</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>    </div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>}</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span> </div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno"><a class="line" href="class_robot_g7.html#a939766cb8e0bf4d9c5cb92f173606d02">  162</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_robot_g7.html#a939766cb8e0bf4d9c5cb92f173606d02">RobotG7::systemRunningAuto</a>()</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>{</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>    this-&gt;prepareRunningManual();</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>    this-&gt;inputProcess();</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>    </div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>    <span class="keywordflow">switch</span>(this-&gt;systemNav)</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>    {</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="_ctrl_way_8h.html#a1415309ebeac845b74bf341ef166fa39a6a62f1e82647c91ddf701dea7b9aae3f">DEVANT</a> :</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>        Serial.println(<span class="stringliteral">&quot;On avance !!!&quot;</span>); this-&gt;gamePadAutoGoStart();</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>        <span class="keywordflow">if</span>(this-&gt;<a class="code hl_function" href="class_robot_g7.html#a05a0acccbe1705e6bc6b89564111419f">getDistanceObstacle</a>() &gt;= <a class="code hl_define" href="_robot_g7_8cpp.html#a989760ad6cb65d1ad13e05681ba3be69">LIMIT_GET_OBSTACLE</a>)</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>        {</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>            this-&gt;enableCleanning = <a class="code hl_define" href="_robot_g7_8h.html#a5be3474296638f6b336a0126b2f070ec">ROBOTG7_TRUE</a>;this-&gt;gamePadAutoGoStart();</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>            Serial.println(<span class="stringliteral">&quot;Permit d&#39;avancer !!!&quot;</span>);</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>            this-&gt;<a class="code hl_function" href="class_robot_g7.html#af9e8cc61f988d84dae1df030602370a3">deplacementAvant</a>();</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>        }</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>        <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>        {</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>            Serial.println(<span class="stringliteral">&quot;Non Permit d&#39;avancer !!!&quot;</span>);</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>            this-&gt;<a class="code hl_function" href="class_robot_g7.html#a546dc6faae444b85f408e925205c0f3a">stopRobotG7</a>();this-&gt;gamePadAutoGoStart();</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>            this-&gt;enableCleanning = <a class="code hl_define" href="_robot_g7_8h.html#a642139526d49f9e73b72bf7f2dbd78bb">ROBOTG7_FALSE</a>;</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>            this-&gt;systemNav = this-&gt;cheminAprendre-&gt;<a class="code hl_function" href="class_ctrl_way.html#a1b0a22e840254c7b1fd4ec50b87c0c27">theWayToget</a>(this-&gt;m_gdSound);</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>        }</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="_ctrl_way_8h.html#a1415309ebeac845b74bf341ef166fa39ae6085ecbd5458a79de62387688b12905">DERRIERE</a> :</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>        this-&gt;enableCleanning = <a class="code hl_define" href="_robot_g7_8h.html#a5be3474296638f6b336a0126b2f070ec">ROBOTG7_TRUE</a>;this-&gt;gamePadAutoGoStart();</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>        this-&gt;<a class="code hl_function" href="class_robot_g7.html#ab2e1c273a839b92bc32c7dc0e56525ff">deplacementArriere</a>();</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="_ctrl_way_8h.html#a1415309ebeac845b74bf341ef166fa39a4ee960d97b04a1f22ed7ff81c7aa2e86">GAUCHE</a> :</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>        this-&gt;enableCleanning = <a class="code hl_define" href="_robot_g7_8h.html#a5be3474296638f6b336a0126b2f070ec">ROBOTG7_TRUE</a>;this-&gt;gamePadAutoGoStart();</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>        this-&gt;<a class="code hl_function" href="class_robot_g7.html#acd9a6e1f58a8cd414f3b65ec7d5276d9">tourner_a_GaucheArriere</a>();</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>        this-&gt;systemNav = <a class="code hl_enumvalue" href="_ctrl_way_8h.html#a1415309ebeac845b74bf341ef166fa39a6a62f1e82647c91ddf701dea7b9aae3f">DEVANT</a>;</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="_ctrl_way_8h.html#a1415309ebeac845b74bf341ef166fa39a79f680205087956546ae263797bd1343">DROITE</a> :</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>        this-&gt;enableCleanning = <a class="code hl_define" href="_robot_g7_8h.html#a5be3474296638f6b336a0126b2f070ec">ROBOTG7_TRUE</a>;this-&gt;gamePadAutoGoStart();</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>        this-&gt;<a class="code hl_function" href="class_robot_g7.html#a60f1fd4ed04e5e8557948f49132228c4">tourner_a_DroiteArriere</a>();</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>        this-&gt;systemNav = <a class="code hl_enumvalue" href="_ctrl_way_8h.html#a1415309ebeac845b74bf341ef166fa39a6a62f1e82647c91ddf701dea7b9aae3f">DEVANT</a>;</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>    }</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span> </div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>    <span class="keywordflow">if</span>(this-&gt;enableCleanning)</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>    {</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>        digitalWrite(<a class="code hl_define" href="_robot_g7_8cpp.html#a670efbf10c7e1e503a30b001335479d9">PIN_CLEANNIG</a>, HIGH);this-&gt;gamePadAutoGoStart();</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>    }</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>    <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>    {</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>        digitalWrite(<a class="code hl_define" href="_robot_g7_8cpp.html#a670efbf10c7e1e503a30b001335479d9">PIN_CLEANNIG</a>, LOW);this-&gt;gamePadAutoGoStart();</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>    }</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>    this-&gt;gamePadAutoGoStart();</div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>}</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span> </div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span><span class="keywordtype">void</span> RobotG7::inputProcess()</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>{</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>    Dabble.processInput();</div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>}</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span> </div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span><span class="keywordtype">void</span> RobotG7::obtenirVitesseJoystick()</div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>{</div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>    <span class="keywordtype">float</span> xval = GamePad.getXaxisData();</div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>  <span class="keywordtype">float</span> yval = GamePad.getYaxisData();</div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span> </div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>  <span class="comment">//Pour la calibration</span></div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>  <span class="keywordflow">if</span> (xval &lt; -6) {</div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>    xval = -6;</div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>    this-&gt;gamePadGestionCommand();</div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>  } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (xval &gt; 6) {</div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>    xval = 6;</div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>    this-&gt;gamePadGestionCommand();</div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>  }</div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>  <span class="keywordflow">if</span> (yval &lt; -6) {</div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>    yval = -6;this-&gt;gamePadGestionCommand();</div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>  } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (yval &gt; 6) {</div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>    yval = 6;this-&gt;gamePadGestionCommand();</div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>  }</div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span> </div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>  <span class="keywordtype">int</span> yMapped = 0;</div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>  <span class="keywordflow">if</span> (yval &lt; 0 )</div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>  {</div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>    this-&gt;<a class="code hl_function" href="class_robot_g7.html#ab2e1c273a839b92bc32c7dc0e56525ff">deplacementArriere</a>();this-&gt;gamePadGestionCommand();</div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>    yMapped = map(yval, -6, 0, 250, 0);</div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>  }</div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>  <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>  {</div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>    this-&gt;<a class="code hl_function" href="class_robot_g7.html#af9e8cc61f988d84dae1df030602370a3">deplacementAvant</a>();this-&gt;gamePadGestionCommand();</div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>    yMapped = map(yval, 0, 6, 0, 250);</div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>  }</div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span> </div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>  <span class="keywordtype">int</span> xMapped;</div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>  <span class="keywordflow">if</span> (xval &lt; 0 ){</div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>    xMapped = map(xval, -6, 0, 250, 0);this-&gt;gamePadGestionCommand();</div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>  }</div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>  <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>    xMapped = map(xval, 0, 6, 0, 250);this-&gt;gamePadGestionCommand();</div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>  }</div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span> </div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>  <span class="keywordflow">if</span> (xval &lt; 0 ) {</div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>    this-&gt;m_vitesseGauche = yMapped + xMapped;this-&gt;gamePadGestionCommand();</div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>    <span class="keywordflow">if</span> (this-&gt;m_vitesseGauche  &gt; 250) {</div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>      this-&gt;m_vitesseGauche  = 250;this-&gt;gamePadGestionCommand();</div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>    }</div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span> </div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>    this-&gt;m_vitesseDroite = yMapped - xMapped;this-&gt;gamePadGestionCommand();</div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>    <span class="keywordflow">if</span> (this-&gt;m_vitesseDroite &lt; 0) {this-&gt;gamePadGestionCommand();</div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>      this-&gt;m_vitesseDroite = 0;</div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>    }</div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span> </div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>  } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>    this-&gt;m_vitesseGauche = yMapped - xMapped;this-&gt;gamePadGestionCommand();</div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>    <span class="keywordflow">if</span> (this-&gt;m_vitesseGauche &lt; 0) {this-&gt;gamePadGestionCommand();</div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>      this-&gt;m_vitesseGauche = 0;</div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>    }<span class="comment">// pwmchannel</span></div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span> </div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>    this-&gt;m_vitesseDroite = yMapped + xMapped;this-&gt;gamePadGestionCommand();</div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>    <span class="keywordflow">if</span> (this-&gt;m_vitesseDroite &gt; 250) {this-&gt;gamePadGestionCommand();</div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>      this-&gt;m_vitesseDroite = 250;</div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>    }</div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>  }</div>
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span> </div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span> </div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>}</div>
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span> </div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span><span class="keywordtype">void</span> RobotG7::gamePadGestionCommand()</div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>{</div>
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>    <span class="keywordflow">if</span>(GamePad.isCrossPressed())</div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>    {</div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>        Serial.println(<span class="stringliteral">&quot;On nettoie&quot;</span>);</div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>        this-&gt;enableCleanning = <a class="code hl_define" href="_robot_g7_8h.html#a5be3474296638f6b336a0126b2f070ec">ROBOTG7_TRUE</a>;</div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>    }</div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>    <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>    {</div>
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>        Serial.println(<span class="stringliteral">&quot;On ne nettoie pas&quot;</span>);</div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>        this-&gt;enableCleanning = <a class="code hl_define" href="_robot_g7_8h.html#a642139526d49f9e73b72bf7f2dbd78bb">ROBOTG7_FALSE</a>;</div>
+<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>    }</div>
+<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>    <span class="keywordflow">if</span>(this-&gt;enableCleanning)</div>
+<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>    {   </div>
+<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>        Serial.println(<span class="stringliteral">&quot;On nettoie ici&quot;</span>);</div>
+<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>        digitalWrite(<a class="code hl_define" href="_robot_g7_8cpp.html#a670efbf10c7e1e503a30b001335479d9">PIN_CLEANNIG</a>, HIGH);</div>
+<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>    }</div>
+<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>    <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>    {</div>
+<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>        Serial.println(<span class="stringliteral">&quot;On ne nettoie pas ici&quot;</span>);</div>
+<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>        digitalWrite(<a class="code hl_define" href="_robot_g7_8cpp.html#a670efbf10c7e1e503a30b001335479d9">PIN_CLEANNIG</a>, LOW);</div>
+<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>    }</div>
+<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span> </div>
+<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>    <span class="keywordflow">if</span>(GamePad.isSelectPressed())</div>
+<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>    {</div>
+<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>        <a class="code hl_variable" href="_robot_g7_8cpp.html#a4c57d3e34c8fe5bc12be40622b490b1d">tempctrl</a> = 3;</div>
+<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>    }</div>
+<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>}</div>
+<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span> </div>
+<div class="line"><a id="l00311" name="l00311"></a><span class="lineno"><a class="line" href="class_robot_g7.html#a282d016e79e21ed61331f911d2dc237d">  311</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_robot_g7.html#a282d016e79e21ed61331f911d2dc237d">RobotG7::systemRunningManual</a>()</div>
+<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>{</div>
+<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>    this-&gt;prepareRunningManual();</div>
+<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>    this-&gt;inputProcess();</div>
+<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>    this-&gt;obtenirVitesseJoystick();</div>
+<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>    this-&gt;<a class="code hl_function" href="class_robot_g7.html#a3d453cf444709fc4fd6d0b0114618c35">writeSpeedOnChannel</a>(this-&gt;m_vitesseGauche, this-&gt;m_vitesseDroite);</div>
+<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>}</div>
+<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span> </div>
+<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span><span class="comment">// void RobotG7::runningAutoMode(uint32_t PreviousTime)</span></div>
+<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span><span class="comment">// {</span></div>
+<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>   </div>
+<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span><span class="comment">// }</span></div>
+<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span> </div>
+<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span><span class="comment">// void RobotG7::systemRunning()</span></div>
+<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span><span class="comment">// {</span></div>
+<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span><span class="comment">//     switch (this-&gt;m_modeNav)</span></div>
+<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span><span class="comment">//     {</span></div>
+<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span><span class="comment">//     case MODE_AUTOMATIQUE:</span></div>
+<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span><span class="comment">//         /* code */</span></div>
+<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span><span class="comment">//         break;</span></div>
+<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span><span class="comment">//     case MODE_MANUEL:</span></div>
+<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span><span class="comment">//         /* code */</span></div>
+<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span><span class="comment">//         break;</span></div>
+<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span>    </div>
+<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span><span class="comment">//     default:</span></div>
+<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span><span class="comment">//         break;</span></div>
+<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span><span class="comment">//     }</span></div>
+<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span><span class="comment">// }</span></div>
+<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span> </div>
+<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span><span class="comment">// ++++++++++++++++++++++++ mode de navigation +++++++++++++++++++++++++</span></div>
+<div class="line"><a id="l00341" name="l00341"></a><span class="lineno"><a class="line" href="class_robot_g7.html#a0522c9cc557849deaaff09a93f9396ba">  341</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_robot_g7.html#a0522c9cc557849deaaff09a93f9396ba">RobotG7::navigation</a>()</div>
+<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>{</div>
+<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span>    <span class="keywordflow">switch</span>(this-&gt;m_modeNav)</div>
+<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span>    {</div>
+<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="_robot_g7_8h.html#af7e27612dcf48f1519de25b6c4293313a2ab2ea921d7cab148e47b16bdfda7d98">MODE_START</a> :</div>
+<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span>        Serial.println(<span class="stringliteral">&quot;Mode start !!!&quot;</span>);</div>
+<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span>        </div>
+<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span>        this-&gt;modeManualnotPrepared = <a class="code hl_define" href="_robot_g7_8h.html#a5be3474296638f6b336a0126b2f070ec">ROBOTG7_TRUE</a>;</div>
+<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span>        </div>
+<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span>        <span class="keywordflow">if</span>(this-&gt;enableCleanning)</div>
+<div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span>        {</div>
+<div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span>            digitalWrite(<a class="code hl_define" href="_robot_g7_8cpp.html#a670efbf10c7e1e503a30b001335479d9">PIN_CLEANNIG</a>, HIGH);</div>
+<div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span>        }</div>
+<div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span>        <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span>        {</div>
+<div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span>            digitalWrite(<a class="code hl_define" href="_robot_g7_8cpp.html#a670efbf10c7e1e503a30b001335479d9">PIN_CLEANNIG</a>, LOW);</div>
+<div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span>        }</div>
+<div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span>        this-&gt;<a class="code hl_function" href="class_robot_g7.html#a546dc6faae444b85f408e925205c0f3a">stopRobotG7</a>();</div>
+<div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00360" name="l00360"></a><span class="lineno">  360</span>    <span class="keywordflow">case</span>  <a class="code hl_enumvalue" href="_robot_g7_8h.html#af7e27612dcf48f1519de25b6c4293313affb2438b47d21191bd1ba7bcbdf40fa5">MODE_AUTOMATIQUE</a> :</div>
+<div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span>        Serial.println(<span class="stringliteral">&quot;Mode automatique !!!&quot;</span>);</div>
+<div class="line"><a id="l00362" name="l00362"></a><span class="lineno">  362</span>        this-&gt;<a class="code hl_function" href="class_robot_g7.html#a939766cb8e0bf4d9c5cb92f173606d02">systemRunningAuto</a>();</div>
+<div class="line"><a id="l00363" name="l00363"></a><span class="lineno">  363</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00364" name="l00364"></a><span class="lineno">  364</span> </div>
+<div class="line"><a id="l00365" name="l00365"></a><span class="lineno">  365</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="_robot_g7_8h.html#af7e27612dcf48f1519de25b6c4293313a290a299a6b0a27ec97bfbc9b82edd252">MODE_MANUEL</a>:</div>
+<div class="line"><a id="l00366" name="l00366"></a><span class="lineno">  366</span>        Serial.println(<span class="stringliteral">&quot;Mode manuel !!!&quot;</span>);</div>
+<div class="line"><a id="l00367" name="l00367"></a><span class="lineno">  367</span>        <span class="comment">// this-&gt;stopRobotG7();</span></div>
+<div class="line"><a id="l00368" name="l00368"></a><span class="lineno">  368</span>        this-&gt;<a class="code hl_function" href="class_robot_g7.html#a282d016e79e21ed61331f911d2dc237d">systemRunningManual</a>();</div>
+<div class="line"><a id="l00369" name="l00369"></a><span class="lineno">  369</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00370" name="l00370"></a><span class="lineno">  370</span> </div>
+<div class="line"><a id="l00371" name="l00371"></a><span class="lineno">  371</span>    }</div>
+<div class="line"><a id="l00372" name="l00372"></a><span class="lineno">  372</span>}</div>
+<div class="ttc" id="a_ctrl_way_8h_html_a1415309ebeac845b74bf341ef166fa39a4ee960d97b04a1f22ed7ff81c7aa2e86"><div class="ttname"><a href="_ctrl_way_8h.html#a1415309ebeac845b74bf341ef166fa39a4ee960d97b04a1f22ed7ff81c7aa2e86">GAUCHE</a></div><div class="ttdeci">@ GAUCHE</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_way_8h_source.html#l00026">CtrlWay.h:26</a></div></div>
+<div class="ttc" id="a_ctrl_way_8h_html_a1415309ebeac845b74bf341ef166fa39a6a62f1e82647c91ddf701dea7b9aae3f"><div class="ttname"><a href="_ctrl_way_8h.html#a1415309ebeac845b74bf341ef166fa39a6a62f1e82647c91ddf701dea7b9aae3f">DEVANT</a></div><div class="ttdeci">@ DEVANT</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_way_8h_source.html#l00024">CtrlWay.h:24</a></div></div>
+<div class="ttc" id="a_ctrl_way_8h_html_a1415309ebeac845b74bf341ef166fa39a79f680205087956546ae263797bd1343"><div class="ttname"><a href="_ctrl_way_8h.html#a1415309ebeac845b74bf341ef166fa39a79f680205087956546ae263797bd1343">DROITE</a></div><div class="ttdeci">@ DROITE</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_way_8h_source.html#l00028">CtrlWay.h:27</a></div></div>
+<div class="ttc" id="a_ctrl_way_8h_html_a1415309ebeac845b74bf341ef166fa39ae6085ecbd5458a79de62387688b12905"><div class="ttname"><a href="_ctrl_way_8h.html#a1415309ebeac845b74bf341ef166fa39ae6085ecbd5458a79de62387688b12905">DERRIERE</a></div><div class="ttdeci">@ DERRIERE</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_way_8h_source.html#l00025">CtrlWay.h:25</a></div></div>
+<div class="ttc" id="a_robot_g7_8cpp_html_a2ea78da1d67ad267173b4daddcb55124"><div class="ttname"><a href="_robot_g7_8cpp.html#a2ea78da1d67ad267173b4daddcb55124">DEFAULT_TRIG_PIN</a></div><div class="ttdeci">#define DEFAULT_TRIG_PIN</div><div class="ttdef"><b>Definition:</b> <a href="_robot_g7_8cpp_source.html#l00015">RobotG7.cpp:15</a></div></div>
+<div class="ttc" id="a_robot_g7_8cpp_html_a4c57d3e34c8fe5bc12be40622b490b1d"><div class="ttname"><a href="_robot_g7_8cpp.html#a4c57d3e34c8fe5bc12be40622b490b1d">tempctrl</a></div><div class="ttdeci">int tempctrl</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00042">main.cpp:42</a></div></div>
+<div class="ttc" id="a_robot_g7_8cpp_html_a670efbf10c7e1e503a30b001335479d9"><div class="ttname"><a href="_robot_g7_8cpp.html#a670efbf10c7e1e503a30b001335479d9">PIN_CLEANNIG</a></div><div class="ttdeci">#define PIN_CLEANNIG</div><div class="ttdef"><b>Definition:</b> <a href="_robot_g7_8cpp_source.html#l00017">RobotG7.cpp:17</a></div></div>
+<div class="ttc" id="a_robot_g7_8cpp_html_a8025633ed22faa3ca633f24f78703514"><div class="ttname"><a href="_robot_g7_8cpp.html#a8025633ed22faa3ca633f24f78703514">DEFAULT_ECHO_PIN</a></div><div class="ttdeci">#define DEFAULT_ECHO_PIN</div><div class="ttdef"><b>Definition:</b> <a href="_robot_g7_8cpp_source.html#l00016">RobotG7.cpp:16</a></div></div>
+<div class="ttc" id="a_robot_g7_8cpp_html_a88429b50f34953348f4a5c231a7c325f"><div class="ttname"><a href="_robot_g7_8cpp.html#a88429b50f34953348f4a5c231a7c325f">previouMillis</a></div><div class="ttdeci">unsigned long previouMillis</div><div class="ttdoc">Gestion du temps.</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00045">main.cpp:45</a></div></div>
+<div class="ttc" id="a_robot_g7_8cpp_html_a989760ad6cb65d1ad13e05681ba3be69"><div class="ttname"><a href="_robot_g7_8cpp.html#a989760ad6cb65d1ad13e05681ba3be69">LIMIT_GET_OBSTACLE</a></div><div class="ttdeci">#define LIMIT_GET_OBSTACLE</div><div class="ttdef"><b>Definition:</b> <a href="_robot_g7_8cpp_source.html#l00019">RobotG7.cpp:19</a></div></div>
+<div class="ttc" id="a_robot_g7_8h_html"><div class="ttname"><a href="_robot_g7_8h.html">RobotG7.h</a></div></div>
+<div class="ttc" id="a_robot_g7_8h_html_a5be3474296638f6b336a0126b2f070ec"><div class="ttname"><a href="_robot_g7_8h.html#a5be3474296638f6b336a0126b2f070ec">ROBOTG7_TRUE</a></div><div class="ttdeci">#define ROBOTG7_TRUE</div><div class="ttdef"><b>Definition:</b> <a href="_robot_g7_8h_source.html#l00031">RobotG7.h:31</a></div></div>
+<div class="ttc" id="a_robot_g7_8h_html_a642139526d49f9e73b72bf7f2dbd78bb"><div class="ttname"><a href="_robot_g7_8h.html#a642139526d49f9e73b72bf7f2dbd78bb">ROBOTG7_FALSE</a></div><div class="ttdeci">#define ROBOTG7_FALSE</div><div class="ttdoc">FIN Dabble bluetooth////.</div><div class="ttdef"><b>Definition:</b> <a href="_robot_g7_8h_source.html#l00030">RobotG7.h:30</a></div></div>
+<div class="ttc" id="a_robot_g7_8h_html_af7e27612dcf48f1519de25b6c4293313a290a299a6b0a27ec97bfbc9b82edd252"><div class="ttname"><a href="_robot_g7_8h.html#af7e27612dcf48f1519de25b6c4293313a290a299a6b0a27ec97bfbc9b82edd252">MODE_MANUEL</a></div><div class="ttdeci">@ MODE_MANUEL</div><div class="ttdef"><b>Definition:</b> <a href="_robot_g7_8h_source.html#l00039">RobotG7.h:38</a></div></div>
+<div class="ttc" id="a_robot_g7_8h_html_af7e27612dcf48f1519de25b6c4293313a2ab2ea921d7cab148e47b16bdfda7d98"><div class="ttname"><a href="_robot_g7_8h.html#af7e27612dcf48f1519de25b6c4293313a2ab2ea921d7cab148e47b16bdfda7d98">MODE_START</a></div><div class="ttdeci">@ MODE_START</div><div class="ttdef"><b>Definition:</b> <a href="_robot_g7_8h_source.html#l00036">RobotG7.h:36</a></div></div>
+<div class="ttc" id="a_robot_g7_8h_html_af7e27612dcf48f1519de25b6c4293313affb2438b47d21191bd1ba7bcbdf40fa5"><div class="ttname"><a href="_robot_g7_8h.html#af7e27612dcf48f1519de25b6c4293313affb2438b47d21191bd1ba7bcbdf40fa5">MODE_AUTOMATIQUE</a></div><div class="ttdeci">@ MODE_AUTOMATIQUE</div><div class="ttdef"><b>Definition:</b> <a href="_robot_g7_8h_source.html#l00037">RobotG7.h:37</a></div></div>
+<div class="ttc" id="aclass_ctrl_way_html"><div class="ttname"><a href="class_ctrl_way.html">CtrlWay</a></div><div class="ttdoc">La class CtrlWay pour gerer la facon de réagir face à l'obstacle.</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_way_8h_source.html#l00032">CtrlWay.h:33</a></div></div>
+<div class="ttc" id="aclass_ctrl_way_html_a1b0a22e840254c7b1fd4ec50b87c0c27"><div class="ttname"><a href="class_ctrl_way.html#a1b0a22e840254c7b1fd4ec50b87c0c27">CtrlWay::theWayToget</a></div><div class="ttdeci">WAY theWayToget(GuideSound *CaptureObstacle)</div><div class="ttdoc">POur choisir quel cote prendre après analyse des deux c\^otés.</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_way_8cpp_source.html#l00094">CtrlWay.cpp:94</a></div></div>
+<div class="ttc" id="aclass_ctrl_way_html_a34da85ad92b6ad3126a3b3435981096e"><div class="ttname"><a href="class_ctrl_way.html#a34da85ad92b6ad3126a3b3435981096e">CtrlWay::begin</a></div><div class="ttdeci">void begin()</div><div class="ttdoc">Pour initialiser tout les composant attachés.</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_way_8cpp_source.html#l00022">CtrlWay.cpp:22</a></div></div>
+<div class="ttc" id="aclass_guide_sound_html"><div class="ttname"><a href="class_guide_sound.html">GuideSound</a></div><div class="ttdoc">GuideSound est la classe qui gere le capteur Ultra Son.</div><div class="ttdef"><b>Definition:</b> <a href="_guide_sound_8h_source.html#l00020">GuideSound.h:21</a></div></div>
+<div class="ttc" id="aclass_guide_sound_html_a9695a67bdf33b555fccf58f8261965b5"><div class="ttname"><a href="class_guide_sound.html#a9695a67bdf33b555fccf58f8261965b5">GuideSound::begin</a></div><div class="ttdeci">void begin()</div><div class="ttdoc">begin initialise la capteur ultra son</div><div class="ttdef"><b>Definition:</b> <a href="_guide_sound_8cpp_source.html#l00027">GuideSound.cpp:27</a></div></div>
+<div class="ttc" id="aclass_motor_control_html"><div class="ttname"><a href="class_motor_control.html">MotorControl</a></div><div class="ttdoc">MotorControl pour gerer les moteur des roues.</div><div class="ttdef"><b>Definition:</b> <a href="_motor_control_8h_source.html#l00048">MotorControl.h:49</a></div></div>
+<div class="ttc" id="aclass_motor_control_html_a2ceaea74982762f62b6b2ef912452b70"><div class="ttname"><a href="class_motor_control.html#a2ceaea74982762f62b6b2ef912452b70">MotorControl::begin</a></div><div class="ttdeci">void begin()</div><div class="ttdoc">begin initialise les moteurs</div><div class="ttdef"><b>Definition:</b> <a href="_motor_control_8cpp_source.html#l00036">MotorControl.cpp:36</a></div></div>
+<div class="ttc" id="aclass_motor_control_html_a76722bc93947ca2393f6aaa5d29fb48d"><div class="ttname"><a href="class_motor_control.html#a76722bc93947ca2393f6aaa5d29fb48d">MotorControl::getRoue1</a></div><div class="ttdeci">MOTOR * getRoue1()</div><div class="ttdoc">Recupere la roue 1.</div><div class="ttdef"><b>Definition:</b> <a href="_motor_control_8h_source.html#l00063">MotorControl.h:63</a></div></div>
+<div class="ttc" id="aclass_motor_control_html_ae2d7876ff28903ef41eb9412da469351"><div class="ttname"><a href="class_motor_control.html#ae2d7876ff28903ef41eb9412da469351">MotorControl::getRoue2</a></div><div class="ttdeci">MOTOR * getRoue2()</div><div class="ttdoc">Recupere la roue 2.</div><div class="ttdef"><b>Definition:</b> <a href="_motor_control_8h_source.html#l00067">MotorControl.h:67</a></div></div>
+<div class="ttc" id="aclass_robot_g7_html_a0522c9cc557849deaaff09a93f9396ba"><div class="ttname"><a href="class_robot_g7.html#a0522c9cc557849deaaff09a93f9396ba">RobotG7::navigation</a></div><div class="ttdeci">void navigation()</div><div class="ttdoc">La navigation su système.</div><div class="ttdef"><b>Definition:</b> <a href="_robot_g7_8cpp_source.html#l00341">RobotG7.cpp:341</a></div></div>
+<div class="ttc" id="aclass_robot_g7_html_a05a0acccbe1705e6bc6b89564111419f"><div class="ttname"><a href="class_robot_g7.html#a05a0acccbe1705e6bc6b89564111419f">RobotG7::getDistanceObstacle</a></div><div class="ttdeci">uint32_t getDistanceObstacle()</div><div class="ttdoc">Methode getDistanceObstacle() nous retournant la distance entre le robot et l'obstacle.</div><div class="ttdef"><b>Definition:</b> <a href="_robot_g7_8h_source.html#l00058">RobotG7.h:58</a></div></div>
+<div class="ttc" id="aclass_robot_g7_html_a161f3b2ecb2ec812a9686c33f0bc40ce"><div class="ttname"><a href="class_robot_g7.html#a161f3b2ecb2ec812a9686c33f0bc40ce">RobotG7::RobotG7</a></div><div class="ttdeci">RobotG7(MOTOR *roue1=NULL, MOTOR *roue2=NULL, int pinCtlMode=5)</div><div class="ttdoc">RobotG7.</div><div class="ttdef"><b>Definition:</b> <a href="_robot_g7_8cpp_source.html#l00024">RobotG7.cpp:24</a></div></div>
+<div class="ttc" id="aclass_robot_g7_html_a282d016e79e21ed61331f911d2dc237d"><div class="ttname"><a href="class_robot_g7.html#a282d016e79e21ed61331f911d2dc237d">RobotG7::systemRunningManual</a></div><div class="ttdeci">void systemRunningManual()</div><div class="ttdoc">Ici le système fonction en mode Manuel.</div><div class="ttdef"><b>Definition:</b> <a href="_robot_g7_8cpp_source.html#l00311">RobotG7.cpp:311</a></div></div>
+<div class="ttc" id="aclass_robot_g7_html_a3d453cf444709fc4fd6d0b0114618c35"><div class="ttname"><a href="class_robot_g7.html#a3d453cf444709fc4fd6d0b0114618c35">RobotG7::writeSpeedOnChannel</a></div><div class="ttdeci">void writeSpeedOnChannel(int vitesseChannel1, int vitesseChannel2)</div><div class="ttdoc">Donner la commande de déplacement suivant les vitesses des roues.</div><div class="ttdef"><b>Definition:</b> <a href="_robot_g7_8cpp_source.html#l00056">RobotG7.cpp:56</a></div></div>
+<div class="ttc" id="aclass_robot_g7_html_a4117417ad319bcec6854fb06add6ab93"><div class="ttname"><a href="class_robot_g7.html#a4117417ad319bcec6854fb06add6ab93">RobotG7::tourner_a_DroiteAvant</a></div><div class="ttdeci">void tourner_a_DroiteAvant()</div><div class="ttdoc">Tourner à droite en avant.</div><div class="ttdef"><b>Definition:</b> <a href="_robot_g7_8cpp_source.html#l00105">RobotG7.cpp:105</a></div></div>
+<div class="ttc" id="aclass_robot_g7_html_a546dc6faae444b85f408e925205c0f3a"><div class="ttname"><a href="class_robot_g7.html#a546dc6faae444b85f408e925205c0f3a">RobotG7::stopRobotG7</a></div><div class="ttdeci">void stopRobotG7()</div><div class="ttdoc">Stopper le déplacement.</div><div class="ttdef"><b>Definition:</b> <a href="_robot_g7_8cpp_source.html#l00144">RobotG7.cpp:144</a></div></div>
+<div class="ttc" id="aclass_robot_g7_html_a60f1fd4ed04e5e8557948f49132228c4"><div class="ttname"><a href="class_robot_g7.html#a60f1fd4ed04e5e8557948f49132228c4">RobotG7::tourner_a_DroiteArriere</a></div><div class="ttdeci">void tourner_a_DroiteArriere()</div><div class="ttdoc">Tourner à droite en arrière.</div><div class="ttdef"><b>Definition:</b> <a href="_robot_g7_8cpp_source.html#l00131">RobotG7.cpp:131</a></div></div>
+<div class="ttc" id="aclass_robot_g7_html_a939766cb8e0bf4d9c5cb92f173606d02"><div class="ttname"><a href="class_robot_g7.html#a939766cb8e0bf4d9c5cb92f173606d02">RobotG7::systemRunningAuto</a></div><div class="ttdeci">void systemRunningAuto()</div><div class="ttdoc">Ici le système fonctionne en mode automatique.</div><div class="ttdef"><b>Definition:</b> <a href="_robot_g7_8cpp_source.html#l00162">RobotG7.cpp:162</a></div></div>
+<div class="ttc" id="aclass_robot_g7_html_ab2e1c273a839b92bc32c7dc0e56525ff"><div class="ttname"><a href="class_robot_g7.html#ab2e1c273a839b92bc32c7dc0e56525ff">RobotG7::deplacementArriere</a></div><div class="ttdeci">void deplacementArriere()</div><div class="ttdoc">Déplacement en arrière.</div><div class="ttdef"><b>Definition:</b> <a href="_robot_g7_8cpp_source.html#l00079">RobotG7.cpp:79</a></div></div>
+<div class="ttc" id="aclass_robot_g7_html_acd9a6e1f58a8cd414f3b65ec7d5276d9"><div class="ttname"><a href="class_robot_g7.html#acd9a6e1f58a8cd414f3b65ec7d5276d9">RobotG7::tourner_a_GaucheArriere</a></div><div class="ttdeci">void tourner_a_GaucheArriere()</div><div class="ttdoc">Tourner à gauche en arrière.</div><div class="ttdef"><b>Definition:</b> <a href="_robot_g7_8cpp_source.html#l00119">RobotG7.cpp:119</a></div></div>
+<div class="ttc" id="aclass_robot_g7_html_ad672da1e73e00594c75b0e10cf7f6d8a"><div class="ttname"><a href="class_robot_g7.html#ad672da1e73e00594c75b0e10cf7f6d8a">RobotG7::begin</a></div><div class="ttdeci">void begin()</div><div class="ttdoc">Methode begin() pour initialiser le système.</div><div class="ttdef"><b>Definition:</b> <a href="_robot_g7_8cpp_source.html#l00045">RobotG7.cpp:45</a></div></div>
+<div class="ttc" id="aclass_robot_g7_html_af9e8cc61f988d84dae1df030602370a3"><div class="ttname"><a href="class_robot_g7.html#af9e8cc61f988d84dae1df030602370a3">RobotG7::deplacementAvant</a></div><div class="ttdeci">void deplacementAvant()</div><div class="ttdoc">Déplacement en avant.</div><div class="ttdef"><b>Definition:</b> <a href="_robot_g7_8cpp_source.html#l00065">RobotG7.cpp:65</a></div></div>
+<div class="ttc" id="aclass_robot_g7_html_affd5cdb6e2a247055ac7fd9cfbc3ab61"><div class="ttname"><a href="class_robot_g7.html#affd5cdb6e2a247055ac7fd9cfbc3ab61">RobotG7::tourner_a_GaucheAvant</a></div><div class="ttdeci">void tourner_a_GaucheAvant()</div><div class="ttdoc">Tourner à gauche en avant.</div><div class="ttdef"><b>Definition:</b> <a href="_robot_g7_8cpp_source.html#l00093">RobotG7.cpp:93</a></div></div>
+<div class="ttc" id="amain_8cpp_html_af94cbc7ef6ac7ee51cd4bacc1a40ccbc"><div class="ttname"><a href="main_8cpp.html#af94cbc7ef6ac7ee51cd4bacc1a40ccbc">roue2</a></div><div class="ttdeci">MOTOR roue2</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00035">main.cpp:35</a></div></div>
+<div class="ttc" id="amain_8cpp_html_af94f6571078c233db3d473d1ad4cd83e"><div class="ttname"><a href="main_8cpp.html#af94f6571078c233db3d473d1ad4cd83e">roue1</a></div><div class="ttdeci">MOTOR roue1</div><div class="ttdoc">Definitions des roues.</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00034">main.cpp:34</a></div></div>
+<div class="ttc" id="astruct_motor_html"><div class="ttname"><a href="struct_motor.html">Motor</a></div><div class="ttdoc">Structure MOTOR, pour gerer les moteurs des roues.</div><div class="ttdef"><b>Definition:</b> <a href="_motor_control_8h_source.html#l00029">MotorControl.h:30</a></div></div>
+<div class="ttc" id="astruct_motor_html_a269aaf98eed4f32414c39b5a0a9f6484"><div class="ttname"><a href="struct_motor.html#a269aaf98eed4f32414c39b5a0a9f6484">Motor::enablePin</a></div><div class="ttdeci">uint8_t enablePin</div><div class="ttdoc">Pin de perminssion.</div><div class="ttdef"><b>Definition:</b> <a href="_motor_control_8h_source.html#l00038">MotorControl.h:38</a></div></div>
+<div class="ttc" id="astruct_motor_html_a64ff93f15e94fd5da23532223a849ec7"><div class="ttname"><a href="struct_motor.html#a64ff93f15e94fd5da23532223a849ec7">Motor::cPin2</a></div><div class="ttdeci">uint8_t cPin2</div><div class="ttdoc">Pin control 2.</div><div class="ttdef"><b>Definition:</b> <a href="_motor_control_8h_source.html#l00035">MotorControl.h:35</a></div></div>
+<div class="ttc" id="astruct_motor_html_a8c3c3f96717f7b00337f45487b46fa70"><div class="ttname"><a href="struct_motor.html#a8c3c3f96717f7b00337f45487b46fa70">Motor::cPin1</a></div><div class="ttdeci">uint8_t cPin1</div><div class="ttdoc">Pin control 1.</div><div class="ttdef"><b>Definition:</b> <a href="_motor_control_8h_source.html#l00032">MotorControl.h:32</a></div></div>
+<div class="ttc" id="astruct_motor_html_ad50d41ae7167a1dade93686cb8a7a671"><div class="ttname"><a href="struct_motor.html#ad50d41ae7167a1dade93686cb8a7a671">Motor::pwmChannel</a></div><div class="ttdeci">int pwmChannel</div><div class="ttdoc">Définition du canal PWM.</div><div class="ttdef"><b>Definition:</b> <a href="_motor_control_8h_source.html#l00042">MotorControl.h:42</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
+</small></address>
+</body>
+</html>

@@ -1,0 +1,156 @@
+\hypertarget{main_8cpp}{}\doxysection{Référence du fichier /home/andremutoke/\+Documents/\+Platform\+IO/\+Projects/\+ESP32\+\_\+\+Project\+\_\+\+Robot\+\_\+\+Manage/src/main.cpp}
+\label{main_8cpp}\index{/home/andremutoke/Documents/PlatformIO/Projects/ESP32\_Project\_Robot\_Manage/src/main.cpp@{/home/andremutoke/Documents/PlatformIO/Projects/ESP32\_Project\_Robot\_Manage/src/main.cpp}}
+{\ttfamily \#include $<$Arduino.\+h$>$}\newline
+{\ttfamily \#include $<$Dabble\+ESP32.\+h$>$}\newline
+{\ttfamily \#include $<$ESP32\+Servo.\+h$>$}\newline
+{\ttfamily \#include $<$Robot\+G7.\+h$>$}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{main_8cpp_a5cf885ab33e020a11eb58d9e7142436b}{INTERVAL\+\_\+\+TIME}}~1000
+\begin{DoxyCompactList}\small\item\em Le système est implémenté dans ce fichier. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{main_8cpp_a4fc01d736fe50cf5b977f755b675f11d}{setup}} ()
+\begin{DoxyCompactList}\small\item\em Fonction de parametrage. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8cpp_afe461d27b9c48d5921c00d521181f12f}{loop}} ()
+\begin{DoxyCompactList}\small\item\em Fonction du déroulement du système. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_motor_control_8h_a07fc823c2440aeb8bc84c6081e050453}{MOTOR}} \mbox{\hyperlink{main_8cpp_af94f6571078c233db3d473d1ad4cd83e}{roue1}} = \{27, 26, 14, \mbox{\hyperlink{_motor_control_8h_a4b3b0d03377f0a353e580a2f319c28f0}{PWMCHANNEL}}\}
+\begin{DoxyCompactList}\small\item\em Definitions des roues. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_motor_control_8h_a07fc823c2440aeb8bc84c6081e050453}{MOTOR}} \mbox{\hyperlink{main_8cpp_af94cbc7ef6ac7ee51cd4bacc1a40ccbc}{roue2}} = \{25, 33, 32, \mbox{\hyperlink{_motor_control_8h_aec23e48fe03e56b314a466f3125c6b69}{PWMCHANNEL2}}\}
+\item 
+\mbox{\hyperlink{class_robot_g7}{Robot\+G7}} $\ast$ \mbox{\hyperlink{main_8cpp_a1fd977fa0687f28a2a7a1a160ae63390}{myrobot}} = new \mbox{\hyperlink{class_robot_g7}{Robot\+G7}}(\&\mbox{\hyperlink{main_8cpp_af94f6571078c233db3d473d1ad4cd83e}{roue1}}, \&\mbox{\hyperlink{main_8cpp_af94cbc7ef6ac7ee51cd4bacc1a40ccbc}{roue2}})
+\begin{DoxyCompactList}\small\item\em Instantiation du robot. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{main_8cpp_a08bde7700e3ec732cafaccae5ec48dd2}{PIN\+\_\+\+MODE\+\_\+\+CTRL}} = 5
+\item 
+int \mbox{\hyperlink{main_8cpp_a4c57d3e34c8fe5bc12be40622b490b1d}{tempctrl}}
+\item 
+unsigned long \mbox{\hyperlink{main_8cpp_a88429b50f34953348f4a5c231a7c325f}{previou\+Millis}}
+\begin{DoxyCompactList}\small\item\em Gestion du temps. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentation des macros}
+\mbox{\Hypertarget{main_8cpp_a5cf885ab33e020a11eb58d9e7142436b}\label{main_8cpp_a5cf885ab33e020a11eb58d9e7142436b}} 
+\index{main.cpp@{main.cpp}!INTERVAL\_TIME@{INTERVAL\_TIME}}
+\index{INTERVAL\_TIME@{INTERVAL\_TIME}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{INTERVAL\_TIME}{INTERVAL\_TIME}}
+{\footnotesize\ttfamily \#define INTERVAL\+\_\+\+TIME~1000}
+
+
+
+Le système est implémenté dans ce fichier. 
+
+
+
+Définition à la ligne \mbox{\hyperlink{main_8cpp_source_l00023}{23}} du fichier \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+
+
+
+\doxysubsection{Documentation des fonctions}
+\mbox{\Hypertarget{main_8cpp_afe461d27b9c48d5921c00d521181f12f}\label{main_8cpp_afe461d27b9c48d5921c00d521181f12f}} 
+\index{main.cpp@{main.cpp}!loop@{loop}}
+\index{loop@{loop}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{loop()}{loop()}}
+{\footnotesize\ttfamily void loop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Fonction du déroulement du système. 
+
+
+
+Définition à la ligne \mbox{\hyperlink{main_8cpp_source_l00060}{60}} du fichier \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+
+\mbox{\Hypertarget{main_8cpp_a4fc01d736fe50cf5b977f755b675f11d}\label{main_8cpp_a4fc01d736fe50cf5b977f755b675f11d}} 
+\index{main.cpp@{main.cpp}!setup@{setup}}
+\index{setup@{setup}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{setup()}{setup()}}
+{\footnotesize\ttfamily void setup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Fonction de parametrage. 
+
+
+
+Définition à la ligne \mbox{\hyperlink{main_8cpp_source_l00048}{48}} du fichier \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+
+
+
+\doxysubsection{Documentation des variables}
+\mbox{\Hypertarget{main_8cpp_a1fd977fa0687f28a2a7a1a160ae63390}\label{main_8cpp_a1fd977fa0687f28a2a7a1a160ae63390}} 
+\index{main.cpp@{main.cpp}!myrobot@{myrobot}}
+\index{myrobot@{myrobot}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{myrobot}{myrobot}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_robot_g7}{Robot\+G7}}$\ast$ myrobot = new \mbox{\hyperlink{class_robot_g7}{Robot\+G7}}(\&\mbox{\hyperlink{main_8cpp_af94f6571078c233db3d473d1ad4cd83e}{roue1}}, \&\mbox{\hyperlink{main_8cpp_af94cbc7ef6ac7ee51cd4bacc1a40ccbc}{roue2}})}
+
+
+
+Instantiation du robot. 
+
+
+
+Définition à la ligne \mbox{\hyperlink{main_8cpp_source_l00039}{39}} du fichier \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+
+\mbox{\Hypertarget{main_8cpp_a08bde7700e3ec732cafaccae5ec48dd2}\label{main_8cpp_a08bde7700e3ec732cafaccae5ec48dd2}} 
+\index{main.cpp@{main.cpp}!PIN\_MODE\_CTRL@{PIN\_MODE\_CTRL}}
+\index{PIN\_MODE\_CTRL@{PIN\_MODE\_CTRL}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{PIN\_MODE\_CTRL}{PIN\_MODE\_CTRL}}
+{\footnotesize\ttfamily int PIN\+\_\+\+MODE\+\_\+\+CTRL = 5}
+
+
+
+Définition à la ligne \mbox{\hyperlink{main_8cpp_source_l00041}{41}} du fichier \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+
+\mbox{\Hypertarget{main_8cpp_a88429b50f34953348f4a5c231a7c325f}\label{main_8cpp_a88429b50f34953348f4a5c231a7c325f}} 
+\index{main.cpp@{main.cpp}!previouMillis@{previouMillis}}
+\index{previouMillis@{previouMillis}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{previouMillis}{previouMillis}}
+{\footnotesize\ttfamily unsigned long previou\+Millis}
+
+
+
+Gestion du temps. 
+
+
+
+Définition à la ligne \mbox{\hyperlink{main_8cpp_source_l00045}{45}} du fichier \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+
+\mbox{\Hypertarget{main_8cpp_af94f6571078c233db3d473d1ad4cd83e}\label{main_8cpp_af94f6571078c233db3d473d1ad4cd83e}} 
+\index{main.cpp@{main.cpp}!roue1@{roue1}}
+\index{roue1@{roue1}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{roue1}{roue1}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_motor_control_8h_a07fc823c2440aeb8bc84c6081e050453}{MOTOR}} roue1 = \{27, 26, 14, \mbox{\hyperlink{_motor_control_8h_a4b3b0d03377f0a353e580a2f319c28f0}{PWMCHANNEL}}\}}
+
+
+
+Definitions des roues. 
+
+Put to PIN 2 the ECHO PIN of U-\/S Put to PIN 4 the TRIG PIN of U-\/S 
+
+Définition à la ligne \mbox{\hyperlink{main_8cpp_source_l00034}{34}} du fichier \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+
+\mbox{\Hypertarget{main_8cpp_af94cbc7ef6ac7ee51cd4bacc1a40ccbc}\label{main_8cpp_af94cbc7ef6ac7ee51cd4bacc1a40ccbc}} 
+\index{main.cpp@{main.cpp}!roue2@{roue2}}
+\index{roue2@{roue2}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{roue2}{roue2}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_motor_control_8h_a07fc823c2440aeb8bc84c6081e050453}{MOTOR}} roue2 = \{25, 33, 32, \mbox{\hyperlink{_motor_control_8h_aec23e48fe03e56b314a466f3125c6b69}{PWMCHANNEL2}}\}}
+
+
+
+Définition à la ligne \mbox{\hyperlink{main_8cpp_source_l00035}{35}} du fichier \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+
+\mbox{\Hypertarget{main_8cpp_a4c57d3e34c8fe5bc12be40622b490b1d}\label{main_8cpp_a4c57d3e34c8fe5bc12be40622b490b1d}} 
+\index{main.cpp@{main.cpp}!tempctrl@{tempctrl}}
+\index{tempctrl@{tempctrl}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{tempctrl}{tempctrl}}
+{\footnotesize\ttfamily int tempctrl}
+
+
+
+Définition à la ligne \mbox{\hyperlink{main_8cpp_source_l00042}{42}} du fichier \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+

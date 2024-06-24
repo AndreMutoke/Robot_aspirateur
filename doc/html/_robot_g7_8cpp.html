@@ -1,0 +1,222 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.4"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>RobotG7_project: Référence du fichier RobotG7/RobotG7.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="robotlogo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">RobotG7_project<span id="projectnumber">&#160;v1.0.0</span>
+   </div>
+   <div id="projectbrief">Robot à usage domestique, pouvant fonctionner en automatique ou manuel</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.9.4 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Recherche','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_37f74ce27f50d4e4dc244652280e45e5.html">RobotG7</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">Macros</a> &#124;
+<a href="#var-members">Variables</a>  </div>
+  <div class="headertitle"><div class="title">Référence du fichier RobotG7.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="_robot_g7_8h_source.html">RobotG7.h</a>&quot;</code><br />
+</div>
+<p><a href="_robot_g7_8cpp_source.html">Aller au code source de ce fichier.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a2ea78da1d67ad267173b4daddcb55124"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_robot_g7_8cpp.html#a2ea78da1d67ad267173b4daddcb55124">DEFAULT_TRIG_PIN</a>&#160;&#160;&#160;4</td></tr>
+<tr class="separator:a2ea78da1d67ad267173b4daddcb55124"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8025633ed22faa3ca633f24f78703514"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_robot_g7_8cpp.html#a8025633ed22faa3ca633f24f78703514">DEFAULT_ECHO_PIN</a>&#160;&#160;&#160;2</td></tr>
+<tr class="separator:a8025633ed22faa3ca633f24f78703514"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a670efbf10c7e1e503a30b001335479d9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_robot_g7_8cpp.html#a670efbf10c7e1e503a30b001335479d9">PIN_CLEANNIG</a>&#160;&#160;&#160;18</td></tr>
+<tr class="separator:a670efbf10c7e1e503a30b001335479d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a989760ad6cb65d1ad13e05681ba3be69"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_robot_g7_8cpp.html#a989760ad6cb65d1ad13e05681ba3be69">LIMIT_GET_OBSTACLE</a>&#160;&#160;&#160;10</td></tr>
+<tr class="separator:a989760ad6cb65d1ad13e05681ba3be69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a88429b50f34953348f4a5c231a7c325f"><td class="memItemLeft" align="right" valign="top">unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_robot_g7_8cpp.html#a88429b50f34953348f4a5c231a7c325f">previouMillis</a></td></tr>
+<tr class="memdesc:a88429b50f34953348f4a5c231a7c325f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gestion du temps.  <a href="_robot_g7_8cpp.html#a88429b50f34953348f4a5c231a7c325f">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a88429b50f34953348f4a5c231a7c325f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c57d3e34c8fe5bc12be40622b490b1d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_robot_g7_8cpp.html#a4c57d3e34c8fe5bc12be40622b490b1d">tempctrl</a></td></tr>
+<tr class="separator:a4c57d3e34c8fe5bc12be40622b490b1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Documentation des macros</h2>
+<a id="a8025633ed22faa3ca633f24f78703514" name="a8025633ed22faa3ca633f24f78703514"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8025633ed22faa3ca633f24f78703514">&#9670;&nbsp;</a></span>DEFAULT_ECHO_PIN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DEFAULT_ECHO_PIN&#160;&#160;&#160;2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Définition à la ligne <a class="el" href="_robot_g7_8cpp_source.html#l00016">16</a> du fichier <a class="el" href="_robot_g7_8cpp_source.html">RobotG7.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a2ea78da1d67ad267173b4daddcb55124" name="a2ea78da1d67ad267173b4daddcb55124"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ea78da1d67ad267173b4daddcb55124">&#9670;&nbsp;</a></span>DEFAULT_TRIG_PIN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DEFAULT_TRIG_PIN&#160;&#160;&#160;4</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Définition à la ligne <a class="el" href="_robot_g7_8cpp_source.html#l00015">15</a> du fichier <a class="el" href="_robot_g7_8cpp_source.html">RobotG7.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a989760ad6cb65d1ad13e05681ba3be69" name="a989760ad6cb65d1ad13e05681ba3be69"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a989760ad6cb65d1ad13e05681ba3be69">&#9670;&nbsp;</a></span>LIMIT_GET_OBSTACLE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LIMIT_GET_OBSTACLE&#160;&#160;&#160;10</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Définition à la ligne <a class="el" href="_robot_g7_8cpp_source.html#l00019">19</a> du fichier <a class="el" href="_robot_g7_8cpp_source.html">RobotG7.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a670efbf10c7e1e503a30b001335479d9" name="a670efbf10c7e1e503a30b001335479d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a670efbf10c7e1e503a30b001335479d9">&#9670;&nbsp;</a></span>PIN_CLEANNIG</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define PIN_CLEANNIG&#160;&#160;&#160;18</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Définition à la ligne <a class="el" href="_robot_g7_8cpp_source.html#l00017">17</a> du fichier <a class="el" href="_robot_g7_8cpp_source.html">RobotG7.cpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentation des variables</h2>
+<a id="a88429b50f34953348f4a5c231a7c325f" name="a88429b50f34953348f4a5c231a7c325f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88429b50f34953348f4a5c231a7c325f">&#9670;&nbsp;</a></span>previouMillis</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned long previouMillis</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gestion du temps. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="main_8cpp_source.html#l00045">45</a> du fichier <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a4c57d3e34c8fe5bc12be40622b490b1d" name="a4c57d3e34c8fe5bc12be40622b490b1d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c57d3e34c8fe5bc12be40622b490b1d">&#9670;&nbsp;</a></span>tempctrl</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int tempctrl</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Définition à la ligne <a class="el" href="main_8cpp_source.html#l00042">42</a> du fichier <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
+</small></address>
+</body>
+</html>

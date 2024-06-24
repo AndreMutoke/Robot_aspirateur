@@ -1,0 +1,191 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.4"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>RobotG7_project:  Fichier source de /home/andremutoke/Documents/PlatformIO/Projects/ESP32_Project_Robot_Manage/src/main.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="robotlogo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">RobotG7_project<span id="projectnumber">&#160;v1.0.0</span>
+   </div>
+   <div id="projectbrief">Robot à usage domestique, pouvant fonctionner en automatique ou manuel</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.9.4 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Recherche','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">main.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="main_8cpp.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*******************************************************************</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> *******************************************************************</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> ** @author : André MUTOKE MUSULE &amp; Japhet TSHIMANGA BWENDE       **</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> ** @date : Mardi 29 Mai 2024                                     **</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> ** @name : main.cpp                                              **</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> ** @details : Ce fichier implémente le déroulement du système    **</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> * *****************************************************************</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> * *****************************************************************</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment">*/</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &lt;Arduino.h&gt;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &lt;DabbleESP32.h&gt;</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &lt;ESP32Servo.h&gt;</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &lt;<a class="code" href="_robot_g7_8h.html">RobotG7.h</a>&gt;</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="main_8cpp.html#a5cf885ab33e020a11eb58d9e7142436b">   23</a></span><span class="preprocessor">#define INTERVAL_TIME 1000</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="main_8cpp.html#af94f6571078c233db3d473d1ad4cd83e">   34</a></span><a class="code hl_struct" href="struct_motor.html">MOTOR</a> <a class="code hl_variable" href="main_8cpp.html#af94f6571078c233db3d473d1ad4cd83e">roue1</a> = {27, 26, 14, <a class="code hl_define" href="_motor_control_8h.html#a4b3b0d03377f0a353e580a2f319c28f0">PWMCHANNEL</a>};  <span class="comment">// Premiere Roue ( cPin1, cPin2, enable)</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="main_8cpp.html#af94cbc7ef6ac7ee51cd4bacc1a40ccbc">   35</a></span><a class="code hl_struct" href="struct_motor.html">MOTOR</a> <a class="code hl_variable" href="main_8cpp.html#af94cbc7ef6ac7ee51cd4bacc1a40ccbc">roue2</a> = {25, 33, 32, <a class="code hl_define" href="_motor_control_8h.html#aec23e48fe03e56b314a466f3125c6b69">PWMCHANNEL2</a>}; <span class="comment">//  Seconde Roue</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="main_8cpp.html#a1fd977fa0687f28a2a7a1a160ae63390">   39</a></span><a class="code hl_class" href="class_robot_g7.html">RobotG7</a> *<a class="code hl_variable" href="main_8cpp.html#a1fd977fa0687f28a2a7a1a160ae63390">myrobot</a> = <span class="keyword">new</span> <a class="code hl_class" href="class_robot_g7.html">RobotG7</a>(&amp;<a class="code hl_variable" href="main_8cpp.html#af94f6571078c233db3d473d1ad4cd83e">roue1</a>, &amp;<a class="code hl_variable" href="main_8cpp.html#af94cbc7ef6ac7ee51cd4bacc1a40ccbc">roue2</a>); <span class="comment">// Notre Robot</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="main_8cpp.html#a08bde7700e3ec732cafaccae5ec48dd2">   41</a></span><span class="keywordtype">int</span> <a class="code hl_variable" href="main_8cpp.html#a08bde7700e3ec732cafaccae5ec48dd2">PIN_MODE_CTRL</a> = 5;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="_robot_g7_8cpp.html#a4c57d3e34c8fe5bc12be40622b490b1d">   42</a></span><span class="keywordtype">int</span> <a class="code hl_variable" href="main_8cpp.html#a4c57d3e34c8fe5bc12be40622b490b1d">tempctrl</a>;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="_ctrl_way_8cpp.html#a88429b50f34953348f4a5c231a7c325f">   45</a></span><span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <a class="code hl_variable" href="main_8cpp.html#a88429b50f34953348f4a5c231a7c325f">previouMillis</a>;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="main_8cpp.html#a4fc01d736fe50cf5b977f755b675f11d">   48</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="main_8cpp.html#a4fc01d736fe50cf5b977f755b675f11d">setup</a>()</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>{</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <a class="code hl_variable" href="main_8cpp.html#a4c57d3e34c8fe5bc12be40622b490b1d">tempctrl</a> = 1;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <a class="code hl_variable" href="main_8cpp.html#a88429b50f34953348f4a5c231a7c325f">previouMillis</a> = 0;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    Serial.begin(115200);</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <a class="code hl_variable" href="main_8cpp.html#a1fd977fa0687f28a2a7a1a160ae63390">myrobot</a>-&gt;<a class="code hl_function" href="class_robot_g7.html#ad672da1e73e00594c75b0e10cf7f6d8a">begin</a>();</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    pinMode(<a class="code hl_variable" href="main_8cpp.html#a08bde7700e3ec732cafaccae5ec48dd2">PIN_MODE_CTRL</a>, INPUT_PULLUP);</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>}</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="main_8cpp.html#afe461d27b9c48d5921c00d521181f12f">   60</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="main_8cpp.html#afe461d27b9c48d5921c00d521181f12f">loop</a>()</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>{</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> currentMillis = millis();</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="comment">// Serial.print(&quot;On veut lire le bp :  &quot;);</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="keywordtype">int</span> temp = digitalRead(<a class="code hl_variable" href="main_8cpp.html#a08bde7700e3ec732cafaccae5ec48dd2">PIN_MODE_CTRL</a>); delay(100);</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="comment">// Serial.println(temp);</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <span class="keywordflow">if</span>(temp == 0)</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    {</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        delay(1000);</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        <a class="code hl_variable" href="main_8cpp.html#a4c57d3e34c8fe5bc12be40622b490b1d">tempctrl</a>++;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        <span class="keywordflow">if</span>(<a class="code hl_variable" href="main_8cpp.html#a4c57d3e34c8fe5bc12be40622b490b1d">tempctrl</a> &gt; 3) {<a class="code hl_variable" href="main_8cpp.html#a4c57d3e34c8fe5bc12be40622b490b1d">tempctrl</a> = 1;}</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    }</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <span class="keywordflow">switch</span> (<a class="code hl_variable" href="main_8cpp.html#a4c57d3e34c8fe5bc12be40622b490b1d">tempctrl</a>)</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    {</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <span class="keywordflow">case</span> 1:</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        <a class="code hl_variable" href="main_8cpp.html#a1fd977fa0687f28a2a7a1a160ae63390">myrobot</a>-&gt;<a class="code hl_function" href="class_robot_g7.html#aa05a90608b3d705d34d8cfe4f00b6046">setNavigation</a>(<a class="code hl_enumvalue" href="_robot_g7_8h.html#af7e27612dcf48f1519de25b6c4293313a2ab2ea921d7cab148e47b16bdfda7d98">MODE_START</a>);</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <span class="keywordflow">case</span> 2:</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        <a class="code hl_variable" href="main_8cpp.html#a1fd977fa0687f28a2a7a1a160ae63390">myrobot</a>-&gt;<a class="code hl_function" href="class_robot_g7.html#aa05a90608b3d705d34d8cfe4f00b6046">setNavigation</a>(<a class="code hl_enumvalue" href="_robot_g7_8h.html#af7e27612dcf48f1519de25b6c4293313a290a299a6b0a27ec97bfbc9b82edd252">MODE_MANUEL</a>);</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <span class="keywordflow">case</span> 3:</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        <a class="code hl_variable" href="main_8cpp.html#a1fd977fa0687f28a2a7a1a160ae63390">myrobot</a>-&gt;<a class="code hl_function" href="class_robot_g7.html#aa05a90608b3d705d34d8cfe4f00b6046">setNavigation</a>(<a class="code hl_enumvalue" href="_robot_g7_8h.html#af7e27612dcf48f1519de25b6c4293313affb2438b47d21191bd1ba7bcbdf40fa5">MODE_AUTOMATIQUE</a>);</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    </div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    <span class="keywordflow">default</span>:</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    }</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    <span class="keywordflow">if</span>(currentMillis - <a class="code hl_variable" href="main_8cpp.html#a88429b50f34953348f4a5c231a7c325f">previouMillis</a> &gt;= <a class="code hl_define" href="main_8cpp.html#a5cf885ab33e020a11eb58d9e7142436b">INTERVAL_TIME</a>)</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    {</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        Serial.println(<a class="code hl_variable" href="main_8cpp.html#a1fd977fa0687f28a2a7a1a160ae63390">myrobot</a>-&gt;<a class="code hl_function" href="class_robot_g7.html#a05a0acccbe1705e6bc6b89564111419f">getDistanceObstacle</a>());</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        <a class="code hl_variable" href="main_8cpp.html#a1fd977fa0687f28a2a7a1a160ae63390">myrobot</a>-&gt;<a class="code hl_function" href="class_robot_g7.html#a0522c9cc557849deaaff09a93f9396ba">navigation</a>();</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>        <a class="code hl_variable" href="main_8cpp.html#a88429b50f34953348f4a5c231a7c325f">previouMillis</a> = currentMillis;</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    }</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>  </div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>}</div>
+<div class="ttc" id="a_motor_control_8h_html_a4b3b0d03377f0a353e580a2f319c28f0"><div class="ttname"><a href="_motor_control_8h.html#a4b3b0d03377f0a353e580a2f319c28f0">PWMCHANNEL</a></div><div class="ttdeci">#define PWMCHANNEL</div><div class="ttdef"><b>Definition:</b> <a href="_motor_control_8h_source.html#l00022">MotorControl.h:22</a></div></div>
+<div class="ttc" id="a_motor_control_8h_html_aec23e48fe03e56b314a466f3125c6b69"><div class="ttname"><a href="_motor_control_8h.html#aec23e48fe03e56b314a466f3125c6b69">PWMCHANNEL2</a></div><div class="ttdeci">#define PWMCHANNEL2</div><div class="ttdef"><b>Definition:</b> <a href="_motor_control_8h_source.html#l00023">MotorControl.h:23</a></div></div>
+<div class="ttc" id="a_robot_g7_8h_html"><div class="ttname"><a href="_robot_g7_8h.html">RobotG7.h</a></div></div>
+<div class="ttc" id="a_robot_g7_8h_html_af7e27612dcf48f1519de25b6c4293313a290a299a6b0a27ec97bfbc9b82edd252"><div class="ttname"><a href="_robot_g7_8h.html#af7e27612dcf48f1519de25b6c4293313a290a299a6b0a27ec97bfbc9b82edd252">MODE_MANUEL</a></div><div class="ttdeci">@ MODE_MANUEL</div><div class="ttdef"><b>Definition:</b> <a href="_robot_g7_8h_source.html#l00039">RobotG7.h:38</a></div></div>
+<div class="ttc" id="a_robot_g7_8h_html_af7e27612dcf48f1519de25b6c4293313a2ab2ea921d7cab148e47b16bdfda7d98"><div class="ttname"><a href="_robot_g7_8h.html#af7e27612dcf48f1519de25b6c4293313a2ab2ea921d7cab148e47b16bdfda7d98">MODE_START</a></div><div class="ttdeci">@ MODE_START</div><div class="ttdef"><b>Definition:</b> <a href="_robot_g7_8h_source.html#l00036">RobotG7.h:36</a></div></div>
+<div class="ttc" id="a_robot_g7_8h_html_af7e27612dcf48f1519de25b6c4293313affb2438b47d21191bd1ba7bcbdf40fa5"><div class="ttname"><a href="_robot_g7_8h.html#af7e27612dcf48f1519de25b6c4293313affb2438b47d21191bd1ba7bcbdf40fa5">MODE_AUTOMATIQUE</a></div><div class="ttdeci">@ MODE_AUTOMATIQUE</div><div class="ttdef"><b>Definition:</b> <a href="_robot_g7_8h_source.html#l00037">RobotG7.h:37</a></div></div>
+<div class="ttc" id="aclass_robot_g7_html"><div class="ttname"><a href="class_robot_g7.html">RobotG7</a></div><div class="ttdoc">La class RobotG7 pour gerer le Système du robot.</div><div class="ttdef"><b>Definition:</b> <a href="_robot_g7_8h_source.html#l00043">RobotG7.h:44</a></div></div>
+<div class="ttc" id="aclass_robot_g7_html_a0522c9cc557849deaaff09a93f9396ba"><div class="ttname"><a href="class_robot_g7.html#a0522c9cc557849deaaff09a93f9396ba">RobotG7::navigation</a></div><div class="ttdeci">void navigation()</div><div class="ttdoc">La navigation su système.</div><div class="ttdef"><b>Definition:</b> <a href="_robot_g7_8cpp_source.html#l00341">RobotG7.cpp:341</a></div></div>
+<div class="ttc" id="aclass_robot_g7_html_a05a0acccbe1705e6bc6b89564111419f"><div class="ttname"><a href="class_robot_g7.html#a05a0acccbe1705e6bc6b89564111419f">RobotG7::getDistanceObstacle</a></div><div class="ttdeci">uint32_t getDistanceObstacle()</div><div class="ttdoc">Methode getDistanceObstacle() nous retournant la distance entre le robot et l'obstacle.</div><div class="ttdef"><b>Definition:</b> <a href="_robot_g7_8h_source.html#l00058">RobotG7.h:58</a></div></div>
+<div class="ttc" id="aclass_robot_g7_html_aa05a90608b3d705d34d8cfe4f00b6046"><div class="ttname"><a href="class_robot_g7.html#aa05a90608b3d705d34d8cfe4f00b6046">RobotG7::setNavigation</a></div><div class="ttdeci">void setNavigation(MODE modeNav)</div><div class="ttdoc">Insérer le mode de navigation.</div><div class="ttdef"><b>Definition:</b> <a href="_robot_g7_8h_source.html#l00102">RobotG7.h:102</a></div></div>
+<div class="ttc" id="aclass_robot_g7_html_ad672da1e73e00594c75b0e10cf7f6d8a"><div class="ttname"><a href="class_robot_g7.html#ad672da1e73e00594c75b0e10cf7f6d8a">RobotG7::begin</a></div><div class="ttdeci">void begin()</div><div class="ttdoc">Methode begin() pour initialiser le système.</div><div class="ttdef"><b>Definition:</b> <a href="_robot_g7_8cpp_source.html#l00045">RobotG7.cpp:45</a></div></div>
+<div class="ttc" id="amain_8cpp_html_a08bde7700e3ec732cafaccae5ec48dd2"><div class="ttname"><a href="main_8cpp.html#a08bde7700e3ec732cafaccae5ec48dd2">PIN_MODE_CTRL</a></div><div class="ttdeci">int PIN_MODE_CTRL</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00041">main.cpp:41</a></div></div>
+<div class="ttc" id="amain_8cpp_html_a1fd977fa0687f28a2a7a1a160ae63390"><div class="ttname"><a href="main_8cpp.html#a1fd977fa0687f28a2a7a1a160ae63390">myrobot</a></div><div class="ttdeci">RobotG7 * myrobot</div><div class="ttdoc">Instantiation du robot.</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00039">main.cpp:39</a></div></div>
+<div class="ttc" id="amain_8cpp_html_a4c57d3e34c8fe5bc12be40622b490b1d"><div class="ttname"><a href="main_8cpp.html#a4c57d3e34c8fe5bc12be40622b490b1d">tempctrl</a></div><div class="ttdeci">int tempctrl</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00042">main.cpp:42</a></div></div>
+<div class="ttc" id="amain_8cpp_html_a4fc01d736fe50cf5b977f755b675f11d"><div class="ttname"><a href="main_8cpp.html#a4fc01d736fe50cf5b977f755b675f11d">setup</a></div><div class="ttdeci">void setup()</div><div class="ttdoc">Fonction de parametrage.</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00048">main.cpp:48</a></div></div>
+<div class="ttc" id="amain_8cpp_html_a5cf885ab33e020a11eb58d9e7142436b"><div class="ttname"><a href="main_8cpp.html#a5cf885ab33e020a11eb58d9e7142436b">INTERVAL_TIME</a></div><div class="ttdeci">#define INTERVAL_TIME</div><div class="ttdoc">Le système est implémenté dans ce fichier.</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00023">main.cpp:23</a></div></div>
+<div class="ttc" id="amain_8cpp_html_a88429b50f34953348f4a5c231a7c325f"><div class="ttname"><a href="main_8cpp.html#a88429b50f34953348f4a5c231a7c325f">previouMillis</a></div><div class="ttdeci">unsigned long previouMillis</div><div class="ttdoc">Gestion du temps.</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00045">main.cpp:45</a></div></div>
+<div class="ttc" id="amain_8cpp_html_af94cbc7ef6ac7ee51cd4bacc1a40ccbc"><div class="ttname"><a href="main_8cpp.html#af94cbc7ef6ac7ee51cd4bacc1a40ccbc">roue2</a></div><div class="ttdeci">MOTOR roue2</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00035">main.cpp:35</a></div></div>
+<div class="ttc" id="amain_8cpp_html_af94f6571078c233db3d473d1ad4cd83e"><div class="ttname"><a href="main_8cpp.html#af94f6571078c233db3d473d1ad4cd83e">roue1</a></div><div class="ttdeci">MOTOR roue1</div><div class="ttdoc">Definitions des roues.</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00034">main.cpp:34</a></div></div>
+<div class="ttc" id="amain_8cpp_html_afe461d27b9c48d5921c00d521181f12f"><div class="ttname"><a href="main_8cpp.html#afe461d27b9c48d5921c00d521181f12f">loop</a></div><div class="ttdeci">void loop()</div><div class="ttdoc">Fonction du déroulement du système.</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00060">main.cpp:60</a></div></div>
+<div class="ttc" id="astruct_motor_html"><div class="ttname"><a href="struct_motor.html">Motor</a></div><div class="ttdoc">Structure MOTOR, pour gerer les moteurs des roues.</div><div class="ttdef"><b>Definition:</b> <a href="_motor_control_8h_source.html#l00029">MotorControl.h:30</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
+</small></address>
+</body>
+</html>

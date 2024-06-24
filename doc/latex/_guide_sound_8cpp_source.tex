@@ -1,0 +1,68 @@
+\hypertarget{_guide_sound_8cpp_source}{}\doxysection{Guide\+Sound.\+cpp}
+\label{_guide_sound_8cpp_source}\index{RobotG7/include/GuideSound/GuideSound.cpp@{RobotG7/include/GuideSound/GuideSound.cpp}}
+\mbox{\hyperlink{_guide_sound_8cpp}{Aller à la documentation de ce fichier.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_guide_sound_8cpp_source_l00001}00001 \textcolor{comment}{/***********************************************************************************}}
+\DoxyCodeLine{\Hypertarget{_guide_sound_8cpp_source_l00002}00002 \textcolor{comment}{ ***********************************************************************************}}
+\DoxyCodeLine{\Hypertarget{_guide_sound_8cpp_source_l00003}00003 \textcolor{comment}{ ** @author : André MUTOKE MUSULE \& Japhet TSHIMANGA BWENDE                       **}}
+\DoxyCodeLine{\Hypertarget{_guide_sound_8cpp_source_l00004}00004 \textcolor{comment}{ ** @date : Mardi 29 Mai 2024                                                     **}}
+\DoxyCodeLine{\Hypertarget{_guide_sound_8cpp_source_l00005}00005 \textcolor{comment}{ ** @name : GuideSound.cpp                                                        **}}
+\DoxyCodeLine{\Hypertarget{_guide_sound_8cpp_source_l00006}00006 \textcolor{comment}{ ** @details : Ce fichier implémente le capteur ultra son                         **}}
+\DoxyCodeLine{\Hypertarget{_guide_sound_8cpp_source_l00007}00007 \textcolor{comment}{ * *********************************************************************************}}
+\DoxyCodeLine{\Hypertarget{_guide_sound_8cpp_source_l00008}00008 \textcolor{comment}{ * *********************************************************************************}}
+\DoxyCodeLine{\Hypertarget{_guide_sound_8cpp_source_l00009}00009 \textcolor{comment}{*/}}
+\DoxyCodeLine{\Hypertarget{_guide_sound_8cpp_source_l00010}00010 }
+\DoxyCodeLine{\Hypertarget{_guide_sound_8cpp_source_l00011}00011 }
+\DoxyCodeLine{\Hypertarget{_guide_sound_8cpp_source_l00012}00012 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_guide_sound_8h}{GuideSound.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_guide_sound_8cpp_source_l00013}00013 }
+\DoxyCodeLine{\Hypertarget{_guide_sound_8cpp_source_l00014}\mbox{\hyperlink{_guide_sound_8cpp_a6c70375f9b7723d2baff508e6f6c2d7f}{00014}} \textcolor{preprocessor}{\#define \_\_PULSE\_DOWN\_\_ 2}}
+\DoxyCodeLine{\Hypertarget{_guide_sound_8cpp_source_l00015}\mbox{\hyperlink{_guide_sound_8cpp_a14f92617b583c521d9e3ab00d9bcaca5}{00015}} \textcolor{preprocessor}{\#define \_\_PULSE\_UP\_\_ 10}}
+\DoxyCodeLine{\Hypertarget{_guide_sound_8cpp_source_l00016}00016 }
+\DoxyCodeLine{\Hypertarget{_guide_sound_8cpp_source_l00017}\mbox{\hyperlink{_guide_sound_8cpp_a388769a3226306c426f5da3d0d73a6a1}{00017}} \textcolor{preprocessor}{\#define \_\_PIN\_OK\_\_ 1}}
+\DoxyCodeLine{\Hypertarget{_guide_sound_8cpp_source_l00018}\mbox{\hyperlink{_guide_sound_8cpp_a9dbda6217123762e6fbf707d1ea25c2d}{00018}} \textcolor{preprocessor}{\#define \_\_PIN\_NOT\_OK\_\_ 0}}
+\DoxyCodeLine{\Hypertarget{_guide_sound_8cpp_source_l00019}00019 }
+\DoxyCodeLine{\Hypertarget{_guide_sound_8cpp_source_l00020}\mbox{\hyperlink{class_guide_sound_a9d5c05a474524fe4c811d50686e012b8}{00020}} \mbox{\hyperlink{class_guide_sound_a9d5c05a474524fe4c811d50686e012b8}{GuideSound::GuideSound}}(uint8\_t trig, uint8\_t echo)}
+\DoxyCodeLine{\Hypertarget{_guide_sound_8cpp_source_l00021}00021 \{}
+\DoxyCodeLine{\Hypertarget{_guide_sound_8cpp_source_l00022}00022     this-\/>m\_trig\_pin = trig;}
+\DoxyCodeLine{\Hypertarget{_guide_sound_8cpp_source_l00023}00023     this-\/>m\_echo\_pin= echo;}
+\DoxyCodeLine{\Hypertarget{_guide_sound_8cpp_source_l00024}00024 \}}
+\DoxyCodeLine{\Hypertarget{_guide_sound_8cpp_source_l00025}00025 }
+\DoxyCodeLine{\Hypertarget{_guide_sound_8cpp_source_l00026}00026 }
+\DoxyCodeLine{\Hypertarget{_guide_sound_8cpp_source_l00027}\mbox{\hyperlink{class_guide_sound_a9695a67bdf33b555fccf58f8261965b5}{00027}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_guide_sound_a9695a67bdf33b555fccf58f8261965b5}{GuideSound::begin}}()}
+\DoxyCodeLine{\Hypertarget{_guide_sound_8cpp_source_l00028}00028 \{}
+\DoxyCodeLine{\Hypertarget{_guide_sound_8cpp_source_l00029}00029     }
+\DoxyCodeLine{\Hypertarget{_guide_sound_8cpp_source_l00030}00030     pinMode(this-\/>m\_trig\_pin, OUTPUT);}
+\DoxyCodeLine{\Hypertarget{_guide_sound_8cpp_source_l00031}00031     pinMode(this-\/>m\_echo\_pin, INPUT);}
+\DoxyCodeLine{\Hypertarget{_guide_sound_8cpp_source_l00032}00032 }
+\DoxyCodeLine{\Hypertarget{_guide_sound_8cpp_source_l00033}00033     digitalWrite(this-\/>m\_trig\_pin, LOW);}
+\DoxyCodeLine{\Hypertarget{_guide_sound_8cpp_source_l00034}00034 \}}
+\DoxyCodeLine{\Hypertarget{_guide_sound_8cpp_source_l00035}00035 }
+\DoxyCodeLine{\Hypertarget{_guide_sound_8cpp_source_l00036}00036 \textcolor{keywordtype}{int} GuideSound::pulseEmit()}
+\DoxyCodeLine{\Hypertarget{_guide_sound_8cpp_source_l00037}00037 \{}
+\DoxyCodeLine{\Hypertarget{_guide_sound_8cpp_source_l00038}00038     \textcolor{keywordflow}{if}(this-\/>m\_trig\_pin != 0)}
+\DoxyCodeLine{\Hypertarget{_guide_sound_8cpp_source_l00039}00039     \{}
+\DoxyCodeLine{\Hypertarget{_guide_sound_8cpp_source_l00040}00040         digitalWrite(this-\/>m\_trig\_pin, LOW); delayMicroseconds(\mbox{\hyperlink{_guide_sound_8cpp_a6c70375f9b7723d2baff508e6f6c2d7f}{\_\_PULSE\_DOWN\_\_}});}
+\DoxyCodeLine{\Hypertarget{_guide_sound_8cpp_source_l00041}00041         digitalWrite(this-\/>m\_trig\_pin, HIGH); delayMicroseconds(\mbox{\hyperlink{_guide_sound_8cpp_a14f92617b583c521d9e3ab00d9bcaca5}{\_\_PULSE\_UP\_\_}});}
+\DoxyCodeLine{\Hypertarget{_guide_sound_8cpp_source_l00042}00042         digitalWrite(this-\/>m\_trig\_pin, LOW);}
+\DoxyCodeLine{\Hypertarget{_guide_sound_8cpp_source_l00043}00043 }
+\DoxyCodeLine{\Hypertarget{_guide_sound_8cpp_source_l00044}00044         \textcolor{keywordflow}{return} \mbox{\hyperlink{_guide_sound_8cpp_a388769a3226306c426f5da3d0d73a6a1}{\_\_PIN\_OK\_\_}};}
+\DoxyCodeLine{\Hypertarget{_guide_sound_8cpp_source_l00045}00045     }
+\DoxyCodeLine{\Hypertarget{_guide_sound_8cpp_source_l00046}00046     \}}
+\DoxyCodeLine{\Hypertarget{_guide_sound_8cpp_source_l00047}00047     \textcolor{keywordflow}{return} \mbox{\hyperlink{_guide_sound_8cpp_a9dbda6217123762e6fbf707d1ea25c2d}{\_\_PIN\_NOT\_OK\_\_}};}
+\DoxyCodeLine{\Hypertarget{_guide_sound_8cpp_source_l00048}00048     }
+\DoxyCodeLine{\Hypertarget{_guide_sound_8cpp_source_l00049}00049 \}}
+\DoxyCodeLine{\Hypertarget{_guide_sound_8cpp_source_l00050}00050 }
+\DoxyCodeLine{\Hypertarget{_guide_sound_8cpp_source_l00051}00051 \textcolor{keywordtype}{void} GuideSound::captureDistance\_and\_Delay()}
+\DoxyCodeLine{\Hypertarget{_guide_sound_8cpp_source_l00052}00052 \{}
+\DoxyCodeLine{\Hypertarget{_guide_sound_8cpp_source_l00053}00053     \textcolor{keywordflow}{if}(this-\/>pulseEmit())}
+\DoxyCodeLine{\Hypertarget{_guide_sound_8cpp_source_l00054}00054     \{}
+\DoxyCodeLine{\Hypertarget{_guide_sound_8cpp_source_l00055}00055         \textcolor{keywordflow}{if}(this-\/>m\_echo\_pin)}
+\DoxyCodeLine{\Hypertarget{_guide_sound_8cpp_source_l00056}00056         \{}
+\DoxyCodeLine{\Hypertarget{_guide_sound_8cpp_source_l00057}00057             this-\/>m\_duree = pulseIn(this-\/>m\_echo\_pin, HIGH);}
+\DoxyCodeLine{\Hypertarget{_guide_sound_8cpp_source_l00058}00058             this-\/>m\_distance = this-\/>m\_duree / 58.2;}
+\DoxyCodeLine{\Hypertarget{_guide_sound_8cpp_source_l00059}00059         \}}
+\DoxyCodeLine{\Hypertarget{_guide_sound_8cpp_source_l00060}00060         }
+\DoxyCodeLine{\Hypertarget{_guide_sound_8cpp_source_l00061}00061     \}}
+\DoxyCodeLine{\Hypertarget{_guide_sound_8cpp_source_l00062}00062 \}}
+
+\end{DoxyCode}

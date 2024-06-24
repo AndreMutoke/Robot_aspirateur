@@ -1,0 +1,110 @@
+\hypertarget{class_guide_sound}{}\doxysection{Référence de la classe Guide\+Sound}
+\label{class_guide_sound}\index{GuideSound@{GuideSound}}
+
+
+\mbox{\hyperlink{class_guide_sound}{Guide\+Sound}} est la classe qui gere le capteur Ultra Son.  
+
+
+
+
+{\ttfamily \#include $<$Guide\+Sound.\+h$>$}
+
+\doxysubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_guide_sound_a9d5c05a474524fe4c811d50686e012b8}{Guide\+Sound}} (uint8\+\_\+t trig=0, uint8\+\_\+t echo=0)
+\begin{DoxyCompactList}\small\item\em Guidesound est le constructeur. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_guide_sound_a9695a67bdf33b555fccf58f8261965b5}{begin}} ()
+\begin{DoxyCompactList}\small\item\em begin initialise la capteur ultra son \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{class_guide_sound_a6752d98e4dbffe2ddb3bad9e7f1d63b8}{get\+Distance}} ()
+\begin{DoxyCompactList}\small\item\em recuperer la distance \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{class_guide_sound_af313fab54d9ef8b2be114f59d39f77be}{get\+Delay\+Echo}} ()
+\begin{DoxyCompactList}\small\item\em Verifie le delay d\textquotesingle{}aller et retour du son emi. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+\mbox{\hyperlink{class_guide_sound}{Guide\+Sound}} est la classe qui gere le capteur Ultra Son. 
+
+Définition à la ligne \mbox{\hyperlink{_guide_sound_8h_source_l00020}{20}} du fichier \mbox{\hyperlink{_guide_sound_8h_source}{Guide\+Sound.\+h}}.
+
+
+
+\doxysubsection{Documentation des constructeurs et destructeur}
+\mbox{\Hypertarget{class_guide_sound_a9d5c05a474524fe4c811d50686e012b8}\label{class_guide_sound_a9d5c05a474524fe4c811d50686e012b8}} 
+\index{GuideSound@{GuideSound}!GuideSound@{GuideSound}}
+\index{GuideSound@{GuideSound}!GuideSound@{GuideSound}}
+\doxysubsubsection{\texorpdfstring{GuideSound()}{GuideSound()}}
+{\footnotesize\ttfamily Guide\+Sound\+::\+Guide\+Sound (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{trig = {\ttfamily 0},  }\item[{uint8\+\_\+t}]{echo = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+Guidesound est le constructeur. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em trig} & parametre de la pin trigger \\
+\hline
+{\em echo} & parametre de la pin echo \\
+\hline
+\end{DoxyParams}
+
+
+Définition à la ligne \mbox{\hyperlink{_guide_sound_8cpp_source_l00020}{20}} du fichier \mbox{\hyperlink{_guide_sound_8cpp_source}{Guide\+Sound.\+cpp}}.
+
+
+
+\doxysubsection{Documentation des fonctions membres}
+\mbox{\Hypertarget{class_guide_sound_a9695a67bdf33b555fccf58f8261965b5}\label{class_guide_sound_a9695a67bdf33b555fccf58f8261965b5}} 
+\index{GuideSound@{GuideSound}!begin@{begin}}
+\index{begin@{begin}!GuideSound@{GuideSound}}
+\doxysubsubsection{\texorpdfstring{begin()}{begin()}}
+{\footnotesize\ttfamily void Guide\+Sound\+::begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+begin initialise la capteur ultra son 
+
+
+
+Définition à la ligne \mbox{\hyperlink{_guide_sound_8cpp_source_l00027}{27}} du fichier \mbox{\hyperlink{_guide_sound_8cpp_source}{Guide\+Sound.\+cpp}}.
+
+\mbox{\Hypertarget{class_guide_sound_af313fab54d9ef8b2be114f59d39f77be}\label{class_guide_sound_af313fab54d9ef8b2be114f59d39f77be}} 
+\index{GuideSound@{GuideSound}!getDelayEcho@{getDelayEcho}}
+\index{getDelayEcho@{getDelayEcho}!GuideSound@{GuideSound}}
+\doxysubsubsection{\texorpdfstring{getDelayEcho()}{getDelayEcho()}}
+{\footnotesize\ttfamily uint32\+\_\+t Guide\+Sound\+::get\+Delay\+Echo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Verifie le delay d\textquotesingle{}aller et retour du son emi. 
+
+\begin{DoxyReturn}{Renvoie}
+uint32\+\_\+t la duree du trajet 
+\end{DoxyReturn}
+
+
+Définition à la ligne \mbox{\hyperlink{_guide_sound_8h_source_l00037}{37}} du fichier \mbox{\hyperlink{_guide_sound_8h_source}{Guide\+Sound.\+h}}.
+
+\mbox{\Hypertarget{class_guide_sound_a6752d98e4dbffe2ddb3bad9e7f1d63b8}\label{class_guide_sound_a6752d98e4dbffe2ddb3bad9e7f1d63b8}} 
+\index{GuideSound@{GuideSound}!getDistance@{getDistance}}
+\index{getDistance@{getDistance}!GuideSound@{GuideSound}}
+\doxysubsubsection{\texorpdfstring{getDistance()}{getDistance()}}
+{\footnotesize\ttfamily uint32\+\_\+t Guide\+Sound\+::get\+Distance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+recuperer la distance 
+
+\begin{DoxyReturn}{Renvoie}
+int la distance de l\textquotesingle{}obstacle 
+\end{DoxyReturn}
+
+
+Définition à la ligne \mbox{\hyperlink{_guide_sound_8h_source_l00033}{33}} du fichier \mbox{\hyperlink{_guide_sound_8h_source}{Guide\+Sound.\+h}}.
+
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+Robot\+G7/include/\+Guide\+Sound/\mbox{\hyperlink{_guide_sound_8h}{Guide\+Sound.\+h}}\item 
+Robot\+G7/include/\+Guide\+Sound/\mbox{\hyperlink{_guide_sound_8cpp}{Guide\+Sound.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,115 @@
+\hypertarget{_ctrl_way_8cpp_source}{}\doxysection{Ctrl\+Way.\+cpp}
+\label{_ctrl_way_8cpp_source}\index{RobotG7/include/CtrlWay/CtrlWay.cpp@{RobotG7/include/CtrlWay/CtrlWay.cpp}}
+\mbox{\hyperlink{_ctrl_way_8cpp}{Aller à la documentation de ce fichier.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_ctrl_way_8cpp_source_l00001}00001 \textcolor{comment}{/***********************************************************************************}}
+\DoxyCodeLine{\Hypertarget{_ctrl_way_8cpp_source_l00002}00002 \textcolor{comment}{ ***********************************************************************************}}
+\DoxyCodeLine{\Hypertarget{_ctrl_way_8cpp_source_l00003}00003 \textcolor{comment}{ ** @author : André MUTOKE MUSULE \& Japhet TSHIMANGA BWENDE                       **}}
+\DoxyCodeLine{\Hypertarget{_ctrl_way_8cpp_source_l00004}00004 \textcolor{comment}{ ** @date : Mardi 29 Mai 2024                                                     **}}
+\DoxyCodeLine{\Hypertarget{_ctrl_way_8cpp_source_l00005}00005 \textcolor{comment}{ ** @name : CtrlWay.cpp                                                           **}}
+\DoxyCodeLine{\Hypertarget{_ctrl_way_8cpp_source_l00006}00006 \textcolor{comment}{ ** @details : Ce fichier implémente la prise de décison du chemin                **}}
+\DoxyCodeLine{\Hypertarget{_ctrl_way_8cpp_source_l00007}00007 \textcolor{comment}{ * *********************************************************************************}}
+\DoxyCodeLine{\Hypertarget{_ctrl_way_8cpp_source_l00008}00008 \textcolor{comment}{ * *********************************************************************************}}
+\DoxyCodeLine{\Hypertarget{_ctrl_way_8cpp_source_l00009}00009 \textcolor{comment}{*/}}
+\DoxyCodeLine{\Hypertarget{_ctrl_way_8cpp_source_l00010}00010 }
+\DoxyCodeLine{\Hypertarget{_ctrl_way_8cpp_source_l00011}00011 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_ctrl_way_8h}{CtrlWay.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_ctrl_way_8cpp_source_l00012}00012 }
+\DoxyCodeLine{\Hypertarget{_ctrl_way_8cpp_source_l00013}\mbox{\hyperlink{_ctrl_way_8cpp_aec022346f94c1da7242caf5759d26553}{00013}} \textcolor{preprocessor}{\#define INIT\_POS\_MOTOR 90}}
+\DoxyCodeLine{\Hypertarget{_ctrl_way_8cpp_source_l00014}\mbox{\hyperlink{_ctrl_way_8cpp_a1c5e765dc486f60352542c229f2036f9}{00014}} \textcolor{preprocessor}{\#define TAILLE\_TAB\_DIST 5}}
+\DoxyCodeLine{\Hypertarget{_ctrl_way_8cpp_source_l00015}00015 \textcolor{keyword}{extern} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \mbox{\hyperlink{_ctrl_way_8cpp_a88429b50f34953348f4a5c231a7c325f}{previouMillis}};}
+\DoxyCodeLine{\Hypertarget{_ctrl_way_8cpp_source_l00016}00016 }
+\DoxyCodeLine{\Hypertarget{_ctrl_way_8cpp_source_l00017}\mbox{\hyperlink{class_ctrl_way_afd46571ef414c733e99e340136408a74}{00017}} \mbox{\hyperlink{class_ctrl_way_afd46571ef414c733e99e340136408a74}{CtrlWay::CtrlWay}}(\textcolor{keywordtype}{int} pinAttached)}
+\DoxyCodeLine{\Hypertarget{_ctrl_way_8cpp_source_l00018}00018 \{}
+\DoxyCodeLine{\Hypertarget{_ctrl_way_8cpp_source_l00019}00019     this-\/>m\_pin\_to\_attach = pinAttached;}
+\DoxyCodeLine{\Hypertarget{_ctrl_way_8cpp_source_l00020}00020     this-\/>posMotor = \mbox{\hyperlink{_ctrl_way_8cpp_aec022346f94c1da7242caf5759d26553}{INIT\_POS\_MOTOR}};}
+\DoxyCodeLine{\Hypertarget{_ctrl_way_8cpp_source_l00021}00021 \}}
+\DoxyCodeLine{\Hypertarget{_ctrl_way_8cpp_source_l00022}\mbox{\hyperlink{class_ctrl_way_a34da85ad92b6ad3126a3b3435981096e}{00022}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_ctrl_way_a34da85ad92b6ad3126a3b3435981096e}{CtrlWay::begin}}()}
+\DoxyCodeLine{\Hypertarget{_ctrl_way_8cpp_source_l00023}00023 \{}
+\DoxyCodeLine{\Hypertarget{_ctrl_way_8cpp_source_l00024}00024     this-\/>m\_pServo.attach(this-\/>m\_pin\_to\_attach);}
+\DoxyCodeLine{\Hypertarget{_ctrl_way_8cpp_source_l00025}00025     this-\/>m\_pServo.write(90);}
+\DoxyCodeLine{\Hypertarget{_ctrl_way_8cpp_source_l00026}00026 }
+\DoxyCodeLine{\Hypertarget{_ctrl_way_8cpp_source_l00027}00027     }
+\DoxyCodeLine{\Hypertarget{_ctrl_way_8cpp_source_l00028}00028 \}}
+\DoxyCodeLine{\Hypertarget{_ctrl_way_8cpp_source_l00029}00029 \textcolor{keywordtype}{int} CtrlWay::seeToLeft(\mbox{\hyperlink{class_guide_sound}{GuideSound}} *CaptureObstacle)}
+\DoxyCodeLine{\Hypertarget{_ctrl_way_8cpp_source_l00030}00030 \{}
+\DoxyCodeLine{\Hypertarget{_ctrl_way_8cpp_source_l00031}00031     \textcolor{keywordtype}{int} tabDistance[\mbox{\hyperlink{_ctrl_way_8cpp_a1c5e765dc486f60352542c229f2036f9}{TAILLE\_TAB\_DIST}}]; \textcolor{comment}{// Pour capturer les valeurs des distance}}
+\DoxyCodeLine{\Hypertarget{_ctrl_way_8cpp_source_l00032}00032     \textcolor{comment}{// On tourne a gauche}}
+\DoxyCodeLine{\Hypertarget{_ctrl_way_8cpp_source_l00033}00033     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} currentTimefor = millis();}
+\DoxyCodeLine{\Hypertarget{_ctrl_way_8cpp_source_l00034}00034     Serial.println(\textcolor{stringliteral}{"{}On cherche a verifier a gauche"{}});}
+\DoxyCodeLine{\Hypertarget{_ctrl_way_8cpp_source_l00035}00035 }
+\DoxyCodeLine{\Hypertarget{_ctrl_way_8cpp_source_l00036}00036     delay(500);}
+\DoxyCodeLine{\Hypertarget{_ctrl_way_8cpp_source_l00037}00037     this-\/>m\_pServo.write(0);  }
+\DoxyCodeLine{\Hypertarget{_ctrl_way_8cpp_source_l00038}00038     delay(500);}
+\DoxyCodeLine{\Hypertarget{_ctrl_way_8cpp_source_l00039}00039 }
+\DoxyCodeLine{\Hypertarget{_ctrl_way_8cpp_source_l00040}00040     Serial.println(\textcolor{stringliteral}{"{}On a verifier a gauche"{}});}
+\DoxyCodeLine{\Hypertarget{_ctrl_way_8cpp_source_l00041}00041     \textcolor{comment}{// On observe la distance des obstacles a gauches}}
+\DoxyCodeLine{\Hypertarget{_ctrl_way_8cpp_source_l00042}00042     \mbox{\hyperlink{_ctrl_way_8cpp_a88429b50f34953348f4a5c231a7c325f}{previouMillis}} = millis();}
+\DoxyCodeLine{\Hypertarget{_ctrl_way_8cpp_source_l00043}00043 }
+\DoxyCodeLine{\Hypertarget{_ctrl_way_8cpp_source_l00044}00044         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0; i<\mbox{\hyperlink{_ctrl_way_8cpp_a1c5e765dc486f60352542c229f2036f9}{TAILLE\_TAB\_DIST}}; ++i)}
+\DoxyCodeLine{\Hypertarget{_ctrl_way_8cpp_source_l00045}00045         \{}
+\DoxyCodeLine{\Hypertarget{_ctrl_way_8cpp_source_l00046}00046             tabDistance[i] = CaptureObstacle-\/>\mbox{\hyperlink{class_guide_sound_a6752d98e4dbffe2ddb3bad9e7f1d63b8}{getDistance}}();}
+\DoxyCodeLine{\Hypertarget{_ctrl_way_8cpp_source_l00047}00047         \}}
+\DoxyCodeLine{\Hypertarget{_ctrl_way_8cpp_source_l00048}00048     delay(500);}
+\DoxyCodeLine{\Hypertarget{_ctrl_way_8cpp_source_l00049}00049     this-\/>m\_pServo.write(this-\/>posMotor);}
+\DoxyCodeLine{\Hypertarget{_ctrl_way_8cpp_source_l00050}00050     delay(500);}
+\DoxyCodeLine{\Hypertarget{_ctrl_way_8cpp_source_l00051}00051 }
+\DoxyCodeLine{\Hypertarget{_ctrl_way_8cpp_source_l00052}00052     Serial.print(\textcolor{stringliteral}{"{}La valeur a gauche est : "{}});}
+\DoxyCodeLine{\Hypertarget{_ctrl_way_8cpp_source_l00053}00053     Serial.println(this-\/>MoyenneDistances(tabDistance));}
+\DoxyCodeLine{\Hypertarget{_ctrl_way_8cpp_source_l00054}00054     \textcolor{keywordflow}{return} this-\/>MoyenneDistances(tabDistance);}
+\DoxyCodeLine{\Hypertarget{_ctrl_way_8cpp_source_l00055}00055 \}}
+\DoxyCodeLine{\Hypertarget{_ctrl_way_8cpp_source_l00056}00056 }
+\DoxyCodeLine{\Hypertarget{_ctrl_way_8cpp_source_l00057}00057 \textcolor{keywordtype}{int} CtrlWay::seeToRight(\mbox{\hyperlink{class_guide_sound}{GuideSound}} *CaptureObstacle)}
+\DoxyCodeLine{\Hypertarget{_ctrl_way_8cpp_source_l00058}00058 \{}
+\DoxyCodeLine{\Hypertarget{_ctrl_way_8cpp_source_l00059}00059     \textcolor{keywordtype}{int} tabDistance[\mbox{\hyperlink{_ctrl_way_8cpp_a1c5e765dc486f60352542c229f2036f9}{TAILLE\_TAB\_DIST}}]; \textcolor{comment}{// Pour capturer les valeurs des distance}}
+\DoxyCodeLine{\Hypertarget{_ctrl_way_8cpp_source_l00060}00060     \textcolor{comment}{// On tourne a gauche}}
+\DoxyCodeLine{\Hypertarget{_ctrl_way_8cpp_source_l00061}00061     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} currentTimefor = millis();}
+\DoxyCodeLine{\Hypertarget{_ctrl_way_8cpp_source_l00062}00062     delay(500);}
+\DoxyCodeLine{\Hypertarget{_ctrl_way_8cpp_source_l00063}00063     this-\/>m\_pServo.write(\mbox{\hyperlink{_ctrl_way_8cpp_aec022346f94c1da7242caf5759d26553}{INIT\_POS\_MOTOR}} + 90); }
+\DoxyCodeLine{\Hypertarget{_ctrl_way_8cpp_source_l00064}00064     delay(500);}
+\DoxyCodeLine{\Hypertarget{_ctrl_way_8cpp_source_l00065}00065     }
+\DoxyCodeLine{\Hypertarget{_ctrl_way_8cpp_source_l00066}00066     \textcolor{comment}{// On observe la distance des obstacles a gauches}}
+\DoxyCodeLine{\Hypertarget{_ctrl_way_8cpp_source_l00067}00067     \mbox{\hyperlink{_ctrl_way_8cpp_a88429b50f34953348f4a5c231a7c325f}{previouMillis}} = millis();}
+\DoxyCodeLine{\Hypertarget{_ctrl_way_8cpp_source_l00068}00068 }
+\DoxyCodeLine{\Hypertarget{_ctrl_way_8cpp_source_l00069}00069     \textcolor{keywordflow}{if}(currentTimefor -\/ \mbox{\hyperlink{_ctrl_way_8cpp_a88429b50f34953348f4a5c231a7c325f}{previouMillis}} >= 2000)}
+\DoxyCodeLine{\Hypertarget{_ctrl_way_8cpp_source_l00070}00070     \{}
+\DoxyCodeLine{\Hypertarget{_ctrl_way_8cpp_source_l00071}00071         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0; i<\mbox{\hyperlink{_ctrl_way_8cpp_a1c5e765dc486f60352542c229f2036f9}{TAILLE\_TAB\_DIST}}; ++i)}
+\DoxyCodeLine{\Hypertarget{_ctrl_way_8cpp_source_l00072}00072         \{}
+\DoxyCodeLine{\Hypertarget{_ctrl_way_8cpp_source_l00073}00073             tabDistance[i] = CaptureObstacle-\/>\mbox{\hyperlink{class_guide_sound_a6752d98e4dbffe2ddb3bad9e7f1d63b8}{getDistance}}();}
+\DoxyCodeLine{\Hypertarget{_ctrl_way_8cpp_source_l00074}00074         \}}
+\DoxyCodeLine{\Hypertarget{_ctrl_way_8cpp_source_l00075}00075     \}}
+\DoxyCodeLine{\Hypertarget{_ctrl_way_8cpp_source_l00076}00076     delay(500);}
+\DoxyCodeLine{\Hypertarget{_ctrl_way_8cpp_source_l00077}00077     this-\/>m\_pServo.write(this-\/>posMotor);}
+\DoxyCodeLine{\Hypertarget{_ctrl_way_8cpp_source_l00078}00078     delay(500);}
+\DoxyCodeLine{\Hypertarget{_ctrl_way_8cpp_source_l00079}00079 }
+\DoxyCodeLine{\Hypertarget{_ctrl_way_8cpp_source_l00080}00080     \textcolor{keywordflow}{return} this-\/>MoyenneDistances(tabDistance);}
+\DoxyCodeLine{\Hypertarget{_ctrl_way_8cpp_source_l00081}00081 \}}
+\DoxyCodeLine{\Hypertarget{_ctrl_way_8cpp_source_l00082}00082 }
+\DoxyCodeLine{\Hypertarget{_ctrl_way_8cpp_source_l00083}00083 \textcolor{keywordtype}{int} CtrlWay::MoyenneDistances(\textcolor{keywordtype}{int} tab[])}
+\DoxyCodeLine{\Hypertarget{_ctrl_way_8cpp_source_l00084}00084 \{}
+\DoxyCodeLine{\Hypertarget{_ctrl_way_8cpp_source_l00085}00085     \textcolor{keywordtype}{int} moyenne = 0;}
+\DoxyCodeLine{\Hypertarget{_ctrl_way_8cpp_source_l00086}00086     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i< \mbox{\hyperlink{_ctrl_way_8cpp_a1c5e765dc486f60352542c229f2036f9}{TAILLE\_TAB\_DIST}}; ++i)}
+\DoxyCodeLine{\Hypertarget{_ctrl_way_8cpp_source_l00087}00087     \{}
+\DoxyCodeLine{\Hypertarget{_ctrl_way_8cpp_source_l00088}00088         moyenne = moyenne + tab[i];}
+\DoxyCodeLine{\Hypertarget{_ctrl_way_8cpp_source_l00089}00089     \}}
+\DoxyCodeLine{\Hypertarget{_ctrl_way_8cpp_source_l00090}00090     moyenne = moyenne / \mbox{\hyperlink{_ctrl_way_8cpp_a1c5e765dc486f60352542c229f2036f9}{TAILLE\_TAB\_DIST}};}
+\DoxyCodeLine{\Hypertarget{_ctrl_way_8cpp_source_l00091}00091     \textcolor{keywordflow}{return} moyenne;}
+\DoxyCodeLine{\Hypertarget{_ctrl_way_8cpp_source_l00092}00092 \}}
+\DoxyCodeLine{\Hypertarget{_ctrl_way_8cpp_source_l00093}00093 }
+\DoxyCodeLine{\Hypertarget{_ctrl_way_8cpp_source_l00094}\mbox{\hyperlink{class_ctrl_way_a1b0a22e840254c7b1fd4ec50b87c0c27}{00094}} \mbox{\hyperlink{_ctrl_way_8h_a2aa4561bddf84ac497c4746e74dce480}{WAY}} \mbox{\hyperlink{class_ctrl_way_a1b0a22e840254c7b1fd4ec50b87c0c27}{CtrlWay::theWayToget}}(\mbox{\hyperlink{class_guide_sound}{GuideSound}} *CaptureObstacle)}
+\DoxyCodeLine{\Hypertarget{_ctrl_way_8cpp_source_l00095}00095 \{}
+\DoxyCodeLine{\Hypertarget{_ctrl_way_8cpp_source_l00096}00096     \textcolor{keywordtype}{int} way1 = this-\/>seeToLeft(CaptureObstacle);}
+\DoxyCodeLine{\Hypertarget{_ctrl_way_8cpp_source_l00097}00097     \textcolor{keywordtype}{int} way2 = this-\/>seeToRight(CaptureObstacle);}
+\DoxyCodeLine{\Hypertarget{_ctrl_way_8cpp_source_l00098}00098 }
+\DoxyCodeLine{\Hypertarget{_ctrl_way_8cpp_source_l00099}00099     \textcolor{keywordflow}{if}(way1 > way2) \{}
+\DoxyCodeLine{\Hypertarget{_ctrl_way_8cpp_source_l00100}00100         Serial.println(\textcolor{stringliteral}{"{}On chisit la gauche"{}});}
+\DoxyCodeLine{\Hypertarget{_ctrl_way_8cpp_source_l00101}00101         \textcolor{keywordflow}{return} \mbox{\hyperlink{_ctrl_way_8h_a1415309ebeac845b74bf341ef166fa39a4ee960d97b04a1f22ed7ff81c7aa2e86}{GAUCHE}};}
+\DoxyCodeLine{\Hypertarget{_ctrl_way_8cpp_source_l00102}00102     \}}
+\DoxyCodeLine{\Hypertarget{_ctrl_way_8cpp_source_l00103}00103     \textcolor{keywordflow}{if}(way1 < way2) \{}
+\DoxyCodeLine{\Hypertarget{_ctrl_way_8cpp_source_l00104}00104         Serial.println(\textcolor{stringliteral}{"{}On chisit la droite"{}});}
+\DoxyCodeLine{\Hypertarget{_ctrl_way_8cpp_source_l00105}00105         \textcolor{keywordflow}{return} \mbox{\hyperlink{_ctrl_way_8h_a1415309ebeac845b74bf341ef166fa39a79f680205087956546ae263797bd1343}{DROITE}};}
+\DoxyCodeLine{\Hypertarget{_ctrl_way_8cpp_source_l00106}00106     \}}
+\DoxyCodeLine{\Hypertarget{_ctrl_way_8cpp_source_l00107}00107     \textcolor{keywordflow}{return} \mbox{\hyperlink{_ctrl_way_8h_a1415309ebeac845b74bf341ef166fa39a4ee960d97b04a1f22ed7ff81c7aa2e86}{GAUCHE}};}
+\DoxyCodeLine{\Hypertarget{_ctrl_way_8cpp_source_l00108}00108 }
+\DoxyCodeLine{\Hypertarget{_ctrl_way_8cpp_source_l00109}00109 \}}
+
+\end{DoxyCode}

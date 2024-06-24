@@ -1,0 +1,108 @@
+\hypertarget{camera__wrap_8cpp_source}{}\doxysection{camera\+\_\+wrap.\+cpp}
+\label{camera__wrap_8cpp_source}\index{CameraCtrl/camera\_wrap.cpp@{CameraCtrl/camera\_wrap.cpp}}
+\mbox{\hyperlink{camera__wrap_8cpp}{Aller à la documentation de ce fichier.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{camera__wrap_8cpp_source_l00001}00001 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{camera__wrap_8h}{camera\_wrap.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{camera__wrap_8cpp_source_l00002}00002 }
+\DoxyCodeLine{\Hypertarget{camera__wrap_8cpp_source_l00003}00003 \textcolor{comment}{// Select camera model}}
+\DoxyCodeLine{\Hypertarget{camera__wrap_8cpp_source_l00004}00004 \textcolor{comment}{// \#define CAMERA\_MODEL\_WROVER\_KIT}}
+\DoxyCodeLine{\Hypertarget{camera__wrap_8cpp_source_l00005}00005 \textcolor{comment}{//\#define CAMERA\_MODEL\_ESP\_EYE}}
+\DoxyCodeLine{\Hypertarget{camera__wrap_8cpp_source_l00006}00006 \textcolor{comment}{// \#define CAMERA\_MODEL\_M5STACK\_PSRAM}}
+\DoxyCodeLine{\Hypertarget{camera__wrap_8cpp_source_l00007}00007 \textcolor{comment}{// \#define CAMERA\_MODEL\_M5STACK\_WIDE}}
+\DoxyCodeLine{\Hypertarget{camera__wrap_8cpp_source_l00008}\mbox{\hyperlink{camera__wrap_8cpp_af3ad6cce87c9d1876247f85e3cece96e}{00008}} \textcolor{preprocessor}{\#define CAMERA\_MODEL\_AI\_THINKER}}
+\DoxyCodeLine{\Hypertarget{camera__wrap_8cpp_source_l00009}00009 }
+\DoxyCodeLine{\Hypertarget{camera__wrap_8cpp_source_l00010}00010 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{camera__pins_8h}{camera\_pins.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{camera__wrap_8cpp_source_l00011}00011 }
+\DoxyCodeLine{\Hypertarget{camera__wrap_8cpp_source_l00012}\mbox{\hyperlink{camera__wrap_8cpp_ad89dc209d606051fbfaad2604383b3e2}{00012}} \textcolor{keywordtype}{int} \mbox{\hyperlink{camera__wrap_8cpp_ad89dc209d606051fbfaad2604383b3e2}{initCamera}}()\{}
+\DoxyCodeLine{\Hypertarget{camera__wrap_8cpp_source_l00013}00013   camera\_config\_t config;}
+\DoxyCodeLine{\Hypertarget{camera__wrap_8cpp_source_l00014}00014   config.ledc\_channel = LEDC\_CHANNEL\_0;}
+\DoxyCodeLine{\Hypertarget{camera__wrap_8cpp_source_l00015}00015   config.ledc\_timer = LEDC\_TIMER\_0;}
+\DoxyCodeLine{\Hypertarget{camera__wrap_8cpp_source_l00016}00016   config.pin\_d0 = Y2\_GPIO\_NUM;}
+\DoxyCodeLine{\Hypertarget{camera__wrap_8cpp_source_l00017}00017   config.pin\_d1 = Y3\_GPIO\_NUM;}
+\DoxyCodeLine{\Hypertarget{camera__wrap_8cpp_source_l00018}00018   config.pin\_d2 = Y4\_GPIO\_NUM;}
+\DoxyCodeLine{\Hypertarget{camera__wrap_8cpp_source_l00019}00019   config.pin\_d3 = Y5\_GPIO\_NUM;}
+\DoxyCodeLine{\Hypertarget{camera__wrap_8cpp_source_l00020}00020   config.pin\_d4 = Y6\_GPIO\_NUM;}
+\DoxyCodeLine{\Hypertarget{camera__wrap_8cpp_source_l00021}00021   config.pin\_d5 = Y7\_GPIO\_NUM;}
+\DoxyCodeLine{\Hypertarget{camera__wrap_8cpp_source_l00022}00022   config.pin\_d6 = Y8\_GPIO\_NUM;}
+\DoxyCodeLine{\Hypertarget{camera__wrap_8cpp_source_l00023}00023   config.pin\_d7 = Y9\_GPIO\_NUM;}
+\DoxyCodeLine{\Hypertarget{camera__wrap_8cpp_source_l00024}00024   config.pin\_xclk = XCLK\_GPIO\_NUM;}
+\DoxyCodeLine{\Hypertarget{camera__wrap_8cpp_source_l00025}00025   config.pin\_pclk = PCLK\_GPIO\_NUM;}
+\DoxyCodeLine{\Hypertarget{camera__wrap_8cpp_source_l00026}00026   config.pin\_vsync = VSYNC\_GPIO\_NUM;}
+\DoxyCodeLine{\Hypertarget{camera__wrap_8cpp_source_l00027}00027   config.pin\_href = HREF\_GPIO\_NUM;}
+\DoxyCodeLine{\Hypertarget{camera__wrap_8cpp_source_l00028}00028   config.pin\_sscb\_sda = SIOD\_GPIO\_NUM;}
+\DoxyCodeLine{\Hypertarget{camera__wrap_8cpp_source_l00029}00029   config.pin\_sscb\_scl = SIOC\_GPIO\_NUM;}
+\DoxyCodeLine{\Hypertarget{camera__wrap_8cpp_source_l00030}00030   config.pin\_pwdn = PWDN\_GPIO\_NUM;}
+\DoxyCodeLine{\Hypertarget{camera__wrap_8cpp_source_l00031}00031   config.pin\_reset = RESET\_GPIO\_NUM;}
+\DoxyCodeLine{\Hypertarget{camera__wrap_8cpp_source_l00032}00032   config.xclk\_freq\_hz = 20000000;}
+\DoxyCodeLine{\Hypertarget{camera__wrap_8cpp_source_l00033}00033   config.pixel\_format = PIXFORMAT\_JPEG;}
+\DoxyCodeLine{\Hypertarget{camera__wrap_8cpp_source_l00034}00034   \textcolor{comment}{//init with high specs to pre-\/allocate larger buffers}}
+\DoxyCodeLine{\Hypertarget{camera__wrap_8cpp_source_l00035}00035   \textcolor{keywordflow}{if}(psramFound())\{}
+\DoxyCodeLine{\Hypertarget{camera__wrap_8cpp_source_l00036}00036     config.frame\_size = FRAMESIZE\_UXGA;}
+\DoxyCodeLine{\Hypertarget{camera__wrap_8cpp_source_l00037}00037     config.jpeg\_quality = 10;}
+\DoxyCodeLine{\Hypertarget{camera__wrap_8cpp_source_l00038}00038     config.fb\_count = 2;}
+\DoxyCodeLine{\Hypertarget{camera__wrap_8cpp_source_l00039}00039   \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{\Hypertarget{camera__wrap_8cpp_source_l00040}00040     \textcolor{comment}{// config.frame\_size = FRAMESIZE\_SVGA;}}
+\DoxyCodeLine{\Hypertarget{camera__wrap_8cpp_source_l00041}00041     config.frame\_size = FRAMESIZE\_VGA;}
+\DoxyCodeLine{\Hypertarget{camera__wrap_8cpp_source_l00042}00042     config.jpeg\_quality = 12;}
+\DoxyCodeLine{\Hypertarget{camera__wrap_8cpp_source_l00043}00043     config.fb\_count = 1;}
+\DoxyCodeLine{\Hypertarget{camera__wrap_8cpp_source_l00044}00044   \}}
+\DoxyCodeLine{\Hypertarget{camera__wrap_8cpp_source_l00045}00045 }
+\DoxyCodeLine{\Hypertarget{camera__wrap_8cpp_source_l00046}00046 \textcolor{preprocessor}{\#if defined(CAMERA\_MODEL\_ESP\_EYE)}}
+\DoxyCodeLine{\Hypertarget{camera__wrap_8cpp_source_l00047}00047   pinMode(13, INPUT\_PULLUP);}
+\DoxyCodeLine{\Hypertarget{camera__wrap_8cpp_source_l00048}00048   pinMode(14, INPUT\_PULLUP);}
+\DoxyCodeLine{\Hypertarget{camera__wrap_8cpp_source_l00049}00049 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{camera__wrap_8cpp_source_l00050}00050 }
+\DoxyCodeLine{\Hypertarget{camera__wrap_8cpp_source_l00051}00051   \textcolor{comment}{// camera init}}
+\DoxyCodeLine{\Hypertarget{camera__wrap_8cpp_source_l00052}00052   esp\_err\_t err = esp\_camera\_init(\&config);}
+\DoxyCodeLine{\Hypertarget{camera__wrap_8cpp_source_l00053}00053   \textcolor{keywordflow}{if} (err != ESP\_OK) \{}
+\DoxyCodeLine{\Hypertarget{camera__wrap_8cpp_source_l00054}00054     Serial.printf(\textcolor{stringliteral}{"{}Camera init failed with error 0x\%x"{}}, err);}
+\DoxyCodeLine{\Hypertarget{camera__wrap_8cpp_source_l00055}00055     \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{\Hypertarget{camera__wrap_8cpp_source_l00056}00056   \}}
+\DoxyCodeLine{\Hypertarget{camera__wrap_8cpp_source_l00057}00057 }
+\DoxyCodeLine{\Hypertarget{camera__wrap_8cpp_source_l00058}00058   sensor\_t * s = esp\_camera\_sensor\_get();}
+\DoxyCodeLine{\Hypertarget{camera__wrap_8cpp_source_l00059}00059   \textcolor{comment}{//initial sensors are flipped vertically and colors are a bit saturated}}
+\DoxyCodeLine{\Hypertarget{camera__wrap_8cpp_source_l00060}00060   \textcolor{keywordflow}{if} (s-\/>id.PID == OV3660\_PID) \{}
+\DoxyCodeLine{\Hypertarget{camera__wrap_8cpp_source_l00061}00061     s-\/>set\_vflip(s, 1);\textcolor{comment}{//flip it back}}
+\DoxyCodeLine{\Hypertarget{camera__wrap_8cpp_source_l00062}00062     s-\/>set\_brightness(s, 1);\textcolor{comment}{//up the blightness just a bit}}
+\DoxyCodeLine{\Hypertarget{camera__wrap_8cpp_source_l00063}00063     s-\/>set\_saturation(s, -\/2);\textcolor{comment}{//lower the saturation}}
+\DoxyCodeLine{\Hypertarget{camera__wrap_8cpp_source_l00064}00064   \}}
+\DoxyCodeLine{\Hypertarget{camera__wrap_8cpp_source_l00065}00065   \textcolor{comment}{//drop down frame size for higher initial frame rate}}
+\DoxyCodeLine{\Hypertarget{camera__wrap_8cpp_source_l00066}00066   \textcolor{comment}{// s-\/>set\_framesize(s, FRAMESIZE\_QVGA);}}
+\DoxyCodeLine{\Hypertarget{camera__wrap_8cpp_source_l00067}00067   \textcolor{comment}{// s-\/>set\_framesize(s, FRAMESIZE\_SVGA);}}
+\DoxyCodeLine{\Hypertarget{camera__wrap_8cpp_source_l00068}00068   s-\/>set\_framesize(s, FRAMESIZE\_VGA);}
+\DoxyCodeLine{\Hypertarget{camera__wrap_8cpp_source_l00069}00069 }
+\DoxyCodeLine{\Hypertarget{camera__wrap_8cpp_source_l00070}00070 \textcolor{preprocessor}{\#if defined(CAMERA\_MODEL\_M5STACK\_WIDE)}}
+\DoxyCodeLine{\Hypertarget{camera__wrap_8cpp_source_l00071}00071   s-\/>set\_vflip(s, 1);}
+\DoxyCodeLine{\Hypertarget{camera__wrap_8cpp_source_l00072}00072   s-\/>set\_hmirror(s, 1);}
+\DoxyCodeLine{\Hypertarget{camera__wrap_8cpp_source_l00073}00073 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{camera__wrap_8cpp_source_l00074}00074   \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{\Hypertarget{camera__wrap_8cpp_source_l00075}00075 \}}
+\DoxyCodeLine{\Hypertarget{camera__wrap_8cpp_source_l00076}00076 }
+\DoxyCodeLine{\Hypertarget{camera__wrap_8cpp_source_l00077}\mbox{\hyperlink{camera__wrap_8cpp_a91b72a4bbb6791527773a0ccbf47d33d}{00077}} esp\_err\_t \mbox{\hyperlink{camera__wrap_8cpp_a91b72a4bbb6791527773a0ccbf47d33d}{grabImage}}( \textcolor{keywordtype}{size\_t}\& jpg\_buf\_len, uint8\_t *jpg\_buf)\{}
+\DoxyCodeLine{\Hypertarget{camera__wrap_8cpp_source_l00078}00078   camera\_fb\_t * fb = NULL;}
+\DoxyCodeLine{\Hypertarget{camera__wrap_8cpp_source_l00079}00079   esp\_err\_t res = ESP\_OK;}
+\DoxyCodeLine{\Hypertarget{camera__wrap_8cpp_source_l00080}00080   fb = esp\_camera\_fb\_get();}
+\DoxyCodeLine{\Hypertarget{camera__wrap_8cpp_source_l00081}00081   uint8\_t *jpg\_buf\_tmp = NULL;}
+\DoxyCodeLine{\Hypertarget{camera__wrap_8cpp_source_l00082}00082   \textcolor{keywordflow}{if} (!fb) \{}
+\DoxyCodeLine{\Hypertarget{camera__wrap_8cpp_source_l00083}00083       Serial.println(\textcolor{stringliteral}{"{}Camera capture failed"{}});}
+\DoxyCodeLine{\Hypertarget{camera__wrap_8cpp_source_l00084}00084       res = ESP\_FAIL;}
+\DoxyCodeLine{\Hypertarget{camera__wrap_8cpp_source_l00085}00085   \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{\Hypertarget{camera__wrap_8cpp_source_l00086}00086     \textcolor{keywordflow}{if}(fb-\/>format != PIXFORMAT\_JPEG)\{}
+\DoxyCodeLine{\Hypertarget{camera__wrap_8cpp_source_l00087}00087         \textcolor{keywordtype}{bool} jpeg\_converted = frame2jpg(fb, 80, \&jpg\_buf\_tmp, \&jpg\_buf\_len);}
+\DoxyCodeLine{\Hypertarget{camera__wrap_8cpp_source_l00088}00088         memcpy(jpg\_buf, jpg\_buf\_tmp, jpg\_buf\_len);}
+\DoxyCodeLine{\Hypertarget{camera__wrap_8cpp_source_l00089}00089         fb = NULL;}
+\DoxyCodeLine{\Hypertarget{camera__wrap_8cpp_source_l00090}00090         \textcolor{keywordflow}{if}(!jpeg\_converted)\{}
+\DoxyCodeLine{\Hypertarget{camera__wrap_8cpp_source_l00091}00091             Serial.println(\textcolor{stringliteral}{"{}JPEG compression failed"{}});}
+\DoxyCodeLine{\Hypertarget{camera__wrap_8cpp_source_l00092}00092             res = ESP\_FAIL;}
+\DoxyCodeLine{\Hypertarget{camera__wrap_8cpp_source_l00093}00093         \}}
+\DoxyCodeLine{\Hypertarget{camera__wrap_8cpp_source_l00094}00094     \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{\Hypertarget{camera__wrap_8cpp_source_l00095}00095         jpg\_buf\_len = fb-\/>len;}
+\DoxyCodeLine{\Hypertarget{camera__wrap_8cpp_source_l00096}00096         memcpy(jpg\_buf, fb-\/>buf, jpg\_buf\_len);}
+\DoxyCodeLine{\Hypertarget{camera__wrap_8cpp_source_l00097}00097         \textcolor{comment}{// Serial.println("{}Image is in jpg format"{});}}
+\DoxyCodeLine{\Hypertarget{camera__wrap_8cpp_source_l00098}00098     \}}
+\DoxyCodeLine{\Hypertarget{camera__wrap_8cpp_source_l00099}00099     esp\_camera\_fb\_return(fb);}
+\DoxyCodeLine{\Hypertarget{camera__wrap_8cpp_source_l00100}00100   \}}
+\DoxyCodeLine{\Hypertarget{camera__wrap_8cpp_source_l00101}00101   \textcolor{keywordflow}{return} res;}
+\DoxyCodeLine{\Hypertarget{camera__wrap_8cpp_source_l00102}00102 \}}
+
+\end{DoxyCode}

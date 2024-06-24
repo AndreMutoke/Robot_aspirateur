@@ -1,0 +1,30 @@
+#include <Arduino.h>
+#include <Wire.h>
+
+#define echoPin 2
+#define trigPin 4
+int a;
+long duration, distance;
+void setup()
+{
+  pinMode(trigPin, OUTPUT);
+  pinMode(echoPin, INPUT);
+  Serial.begin(115200);
+}
+
+void loop()
+{
+  digitalWrite(trigPin, LOW);
+  delayMicroseconds(2);
+  digitalWrite(trigPin, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(trigPin, LOW);
+  duration = pulseIn(echoPin, HIGH);
+  distance = duration/58.2;
+  String disp = String(distance);
+  Serial.print("distance : ");
+  Serial.print(disp);
+  Serial.println("cm");
+  delay(1000);
+}
+https://youtu.be/r6sxkf_II0U?si=Mhpf2A6SIhbjP2a-
